@@ -16,6 +16,10 @@ node_modules/
 webapp/frontend/.next/
 webapp/frontend/node_modules/
 
+# Claude Code and gstack tool directories
+.claude/
+.gstack/
+
 # OS junk
 .DS_Store
 Thumbs.db
