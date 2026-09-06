@@ -10,7 +10,7 @@ and computes:
   - Coverage: fraction of pairs that received a definitive prediction
 
 Usage:
-    python -m matching.score_eval --csv eval/candidate_pairs.csv
+    python -m matching.score_eval --csv matching/eval/candidate_pairs_v3.csv
 
 human_label values recognized: "match", "no_match" (case-insensitive).
 Rows with blank or unrecognized human_label are skipped.
@@ -21,6 +21,9 @@ import csv
 import os
 import sys
 from collections import defaultdict
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 
 def _load_labeled(csv_path: str) -> tuple[list[dict], int]:

@@ -31,6 +31,7 @@ import logging
 import os
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -203,7 +204,8 @@ def run_pipeline(email_path: str, output_path: str) -> None:
     p = urlparse(os.environ["DATABASE_URL"])
     conn = psycopg2.connect(
         host=p.hostname, port=p.port or 5432,
-        dbname=p.path.lstrip("/"), user=p.username, password=p.password,
+        dbname=p.path.lstrip("/"), user=p.username,
+        password=urllib.parse.unquote(p.password or ""),
     )
     claude = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     vc = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])

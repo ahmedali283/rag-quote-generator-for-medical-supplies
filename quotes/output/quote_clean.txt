@@ -9,9 +9,9 @@
 
 SALES QUOTATION
 
-Quote #:    QUOTE-NEW-004421-2026
-Date:       2026-04-15
-Valid For:  30 days from quote date (expires 2026-05-15)
+Quote #:    QUOTE-NEW-20260115
+Date:       2026-01-15
+Valid For:  30 days from quote date
 Prepared By: Generated via RAG pipeline
 
 --------------------------------------------------------------------------------
@@ -19,115 +19,152 @@ BILL TO / SHIP TO
 --------------------------------------------------------------------------------
 Customer:   Riverside Community College, School of Nursing
 Attn:       Dr. Patricia Okafor, Director of Clinical Labs
-Address:    [Street Address on file — please confirm if update needed]
-            [City, State ZIP]
+Address:    [Street Address on file]
+            [City, State ZIP on file]
 Phone:      [Phone on file]
 Email:      p.okafor@riversidecc.edu
-Account #:  ACCT-004421          Customer Type: Repeat
+Account #:  ACCT-004421        Customer Type: Repeat
 
 --------------------------------------------------------------------------------
 LINE ITEMS
 --------------------------------------------------------------------------------
  #  | Product Description                          | Qty | Unit Price | Extended
 ----|----------------------------------------------|-----|------------|----------
- 1  | STERLING® 747112_CS Nitrile Exam Glove,      |     |            |
-    | Medium, Standard Cuff, Gray, Chemo Tested    |  15 |    $87.29  | $1,309.35
-    | [Preferred pricing applied: 3% below         |     |            |
-    |  catalog list of $89.99/cs. Per pattern      |     |            |
-    |  established in QUOTE-100142 and confirmed   |     |            |
-    |  in QUOTE-100327 for ACCT-004421.]           |     |            |
+ 1  | STERLING® 747112_CS Nitrile Exam Glove,      |  15 |    $87.29  | $1,309.35
+    | Medium, Standard Cuff, Gray, Chemo Tested    |     |            |
+    | [Preferred pricing — 3% below list of        |     |            |
+    | $501.58/cs catalog note; unit price per case |     |            |
+    | per QUOTE-100327 & QUOTE-100142. See         |     |            |
+    | pricing note below.]                         |     |            |
     |                                              |     |            |
- 2  | Life/form LF00698U Adult Venipuncture        |     |            |
-    | Injection Training Arm - White               |   3 |   $817.95  | $2,453.85
-    | [Catalog list price. No preferred pricing    |     |            |
-    |  documented for this product category for    |     |            |
-    |  ACCT-004421 in historical quotes.]          |     |            |
+ 2  | Life/form LF00698U Adult Venipuncture        |   3 |   $817.95  | $2,453.85
+    | Injection Training Arm - White               |     |            |
+    | [List/catalog price per QUOTE-100142;        |     |            |
+    | no preferred pricing documented for this     |     |            |
+    | product line]                                |     |            |
     |                                              |     |            |
- 3  | Life/form LF01122U Skin Vein Replacement     |     |            |
-    | Kit, White for Advanced IV Arm               |   6 |   $296.95  | $1,781.70
-    | [Catalog list price. No preferred pricing    |     |            |
-    |  documented for this product category for    |     |            |
-    |  ACCT-004421 in historical quotes.]          |     |            |
+ 3  | *** SEE "ITEMS REQUIRING MANUAL REVIEW" ***  |   6 |      TBD   |      TBD
+    | Replacement Skin Vein Kit (LF01122U or       |     |            |
+    | LF03215U) — UNRESOLVED                       |     |            |
+    |                                              |     |            |
+ 4  | *** SEE "ITEMS REQUIRING MANUAL REVIEW" ***  |   2 |      TBD   |      TBD
+    | Clinton 5-Leg 2-Hook IV Pole — UNRESOLVED    |     |            |
 
 --------------------------------------------------------------------------------
-PRICING SUMMARY
+PRICING SUMMARY (Resolved Line Items Only)
 --------------------------------------------------------------------------------
-                                            Subtotal:          $5,544.90
-                          Volume Discount (8%, $5,000+ tier):   -$443.59
-                                   Freight / Handling:              $0.00
+                                            Subtotal:          $3,763.20
+                        Volume Discount (5%, per tier):         -$188.16
+                                   Freight / Handling:             $0.00
                               --------------------------------
-                                               TOTAL:          $5,101.31
+                         TOTAL (Partial — see review items):  $3,575.04
+
+================================================================================
+⚠️  NOTE: This total reflects ONLY the two resolved line items above (Lines 1–2).
+    Lines 3 and 4 require customer clarification before pricing can be confirmed.
+    The final invoice total will be higher once those items are resolved.
+================================================================================
 
 --------------------------------------------------------------------------------
 PRICING & DISCOUNT NOTES
 --------------------------------------------------------------------------------
 
-PREFERRED UNIT PRICING — LINE 1 (STERLING® Nitrile Gloves, Medium, Gray):
-  Catalog list price for STERLING® 747112_CS is $89.99/case (per resolved
-  catalog data). Preferred unit price of $87.29/case applied — representing
-  a 3% reduction below list price. This matches the documented preferred
-  pricing pattern for ACCT-004421 established in QUOTE-100142 (dated
-  2025-09-18) and reconfirmed in QUOTE-100327 (dated 2026-01-08), both of
-  which explicitly note: "Repeat customer — preferred unit pricing applied
-  on gloves (3% below list)." Account qualifies under the Repeat Customer
-  Pricing policy (6 prior orders in 12 months per QUOTE-100327).
+LINE 1 — Preferred Unit Pricing on Sterling Nitrile Gloves (Medium, Gray):
+  The catalog list price retrieved for STERLING® 747112_CS is $501.58/case.
+  However, QUOTE-100142 (dated 2025-09-18) and QUOTE-100327 (dated 2026-01-08)
+  both document a preferred unit price of $87.29/case for this account
+  (ACCT-004421) on this specific SKU, explicitly noted as "preferred pricing —
+  3% below list." Per pipeline instructions, catalog prices are used unless
+  historical quotes explicitly document a different preferred price for this
+  customer. Because preferred pricing on this exact SKU is explicitly documented
+  across two prior quotes for this same account, $87.29/case is applied here.
 
-VOLUME DISCOUNT — 8% TIER:
-  Order subtotal of $5,544.90 exceeds the $5,000 threshold, qualifying for
-  the 8% volume discount tier per the Volume Discount Schedule. Note that
-  prior quotes for ACCT-004421 (QUOTE-100142, QUOTE-100327) applied the 5%
-  tier, as those orders fell in the $2,500–$4,999 range. This order's higher
-  subtotal places it in the 8% tier, consistent with the same schedule applied
-  to comparable nursing/clinical lab accounts in QUOTE-100255 and QUOTE-100398.
-  Discount amount: $5,544.90 × 8% = $443.59.
+  ⚠️  REVIEWER ALERT: The catalog price ($501.58/case) and the historical
+  preferred price ($87.29/case) differ substantially. This discrepancy should
+  be verified with the rep or sourcing team before this quote is issued.
+  Possible explanations include a catalog unit mismatch (e.g., per-glove vs.
+  per-case pricing) or a catalog data error. Do not release this quote without
+  confirming the correct case price with James Whitfield or the sourcing desk.
+
+LINE 2 — Standard Catalog Pricing on Life/form LF00698U:
+  Unit price of $817.95 matches exactly the price documented in QUOTE-100142
+  (dated 2025-09-18) for the same SKU and same account. No preferred pricing
+  was noted on this product line in historical quotes; standard catalog price
+  is applied.
+
+VOLUME DISCOUNT — 5% Tier:
+  Resolved subtotal of $3,763.20 falls within the $2,500–$4,999 range,
+  qualifying for a 5% volume discount per the standard discount schedule.
+  This matches the discount tier applied in both QUOTE-100142 ($4,394.92
+  subtotal, 5% discount) and QUOTE-100327 ($2,607.48 subtotal, 5% discount)
+  for this same account. Discount of $188.16 applied accordingly.
+
+  Note: If the two unresolved items (Lines 3–4) are added and the combined
+  subtotal reaches $5,000 or more, the applicable discount tier would increase
+  to 8%. The volume discount should be recalculated once all line items
+  are confirmed.
 
 FREIGHT:
-  Order subtotal ($5,544.90) exceeds $500 threshold. Free freight applied
-  within the contiguous US, consistent with all historical quotes on file for
-  this account and per standard freight policy.
+  Resolved subtotal ($3,763.20) exceeds the $500 free-freight threshold.
+  Free freight applied, consistent with QUOTE-100142 and QUOTE-100327.
 
 --------------------------------------------------------------------------------
-⚠  ITEMS REQUIRING MANUAL REVIEW — NOT INCLUDED IN TOTALS ABOVE
+ITEMS REQUIRING MANUAL REVIEW — Customer Action Required
 --------------------------------------------------------------------------------
-The following item(s) could not be fully resolved and require clarification
-before a final price can be confirmed. Please do not submit a purchase order
-for these items until the details below are addressed.
+The following requested items could NOT be priced in this quotation due to
+product ambiguity. Please review and reply with your selection so we can
+issue a revised or supplemental quote.
 
- ITEM:   Clinton Industries IV Pole, 5-Leg, 2-Hook — Qty: 2
- STATUS: ⚠ UNRESOLVED — PENDING CUSTOMER CLARIFICATION
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ UNRESOLVED ITEM A — Replacement Skin Vein Kit (Qty: 6)                      │
+│                                                                             │
+│ Your request references "replacement skin vein kits for existing IV arms"   │
+│ with part number LF01122U. Our catalog returned two closely matched items:  │
+│                                                                             │
+│   Option 1: Life/form LF01122U                                              │
+│             Skin Vein Replacement Kit, White for [Advanced IV Arm]          │
+│             (Catalog similarity score: 0.853)                               │
+│                                                                             │
+│   Option 2: Life/form LF03215U                                              │
+│             Replacement Skin Vein Kit for [Inject…]                         │
+│             (Catalog similarity score: 0.838)                               │
+│                                                                             │
+│ The two options scored within 0.02 of each other, and we cannot            │
+│ confidently distinguish between them from the request alone. Your prior     │
+│ order QUOTE-100142 included LF01122U (qty 4 @ $296.95/ea), which may be    │
+│ the item you intend, but we are required to confirm before pricing.         │
+│                                                                             │
+│ ➤ ACTION NEEDED: Please confirm whether you want LF01122U or LF03215U,    │
+│   or indicate which IV arm model these kits are intended for.              │
+└─────────────────────────────────────────────────────────────────────────────┘
 
- Reason: The catalog search returned two closely matched products with
-         overlapping descriptions and similarity scores within 0.02 of
-         each other:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ UNRESOLVED ITEM B — Clinton 5-Leg 2-Hook IV Pole (Qty: 2)                  │
+│                                                                             │
+│ Your request references "Clinton 5-leg 2-hook IV poles." Our catalog        │
+│ returned two closely matched items:                                         │
+│                                                                             │
+│   Option 1: Clinton Industries IV-35                                        │
+│             5-Leg, 2-Hook IV Pole                                           │
+│             (Catalog similarity score: 0.899)                               │
+│                                                                             │
+│   Option 2: Clinton Industries IV-40                                        │
+│             Economy 4-Leg, 2-Hook IV Pole                                  │
+│             (Catalog similarity score: 0.892)                               │
+│                                                                             │
+│ The two options scored within 0.02 of each other. Your email describes a   │
+│ "5-leg 2-hook" configuration, which is consistent with the IV-35; however, │
+│ we are not able to confirm pricing without a definitive selection.          │
+│                                                                             │
+│ ➤ ACTION NEEDED: Please confirm the Clinton model number (IV-35 or IV-40)  │
+│   or verify against a prior invoice/packing slip to ensure we quote the    │
+│   correct item.                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 
-           Option A: Clinton Industries IV-35, 5-Leg, 2-Hook IV Pole
-                     (catalog similarity score: 0.899)
-           Option B: Clinton Industries IV-40, Economy 4-Leg, 2-Hook
-                     IV Pole (catalog similarity score: 0.892)
-
-         Dr. Okafor's email references "the Clinton 5-leg 2-hook ones
-         we ordered last time," which aligns most closely with Option A
-         (IV-35, 5-Leg). However, because the two catalog matches are
-         within the automated ambiguity threshold and the prior order
-         history for ACCT-004421 does not include IV poles, we cannot
-         confirm the correct model number with sufficient certainty.
-
-         Note: QUOTE-100398 (Jefferson Medical Center) includes the
-         Clinton Industries IV-35 at $158.55/unit, which may serve as
-         a pricing reference if Option A is confirmed — but this price
-         cannot be applied until the item is resolved.
-
- ACTION REQUIRED:
-         Please reply to confirm which model you ordered previously:
-           • Clinton Industries IV-35 (5-Leg, 2-Hook) — standard model
-           • Clinton Industries IV-40 (4-Leg, 2-Hook) — economy model
-
-         Once confirmed, we will issue a revised quote addendum for the
-         2 units and confirm whether any adjustment to the volume discount
-         tier applies (the updated subtotal may remain in the 8% tier
-         depending on final unit price).
-
-         Contact: sales@meridianmedsupply.com | Tel: (614) 555-0190
+Once you confirm your selections for Items A and B, we will issue an updated
+quotation reflecting all four line items and the final total. If the combined
+order subtotal reaches $5,000+, an 8% volume discount would apply in lieu of
+the 5% shown above.
 
 --------------------------------------------------------------------------------
 TERMS & CONDITIONS
@@ -150,4 +187,11 @@ Repeat Customer Pricing: Accounts with 3+ prior orders in the last 12 months
   Preferred pricing is noted per line item where applicable.
 
 NOTE: Prices quoted are valid for 30 days. Simulator/manikin prices subject to
-manufacturer price changes. Glove and consumable
+manufacturer price changes. Glove and consumable pricing may fluctuate with
+supply. Contact your rep to confirm pricing before placing order.
+
+================================================================================
+                    Thank you for your business!
+         Questions? Contact sales@meridianmedsupply.com | (614) 555-0190
+================================================================================
+```

@@ -13,12 +13,12 @@ Usage:
 """
 
 import argparse
-import asyncio
 import json
 import logging
 import os
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -34,6 +34,7 @@ log = logging.getLogger(__name__)
 
 VOYAGE_MODEL = "voyage-2"
 ITEM_RESOLUTION_THRESHOLD = 0.72   # cosine similarity floor for catalog match
+SIZE_NARROWED_THRESHOLD = 0.65     # lower floor when size filter reduced candidates to exactly one
 AMBIGUITY_GAP = 0.02               # if top-2 matches within this gap, flag as ambiguous
 TEMPLATE_PATH = Path(__file__).parent / "quote_template.txt"
 
@@ -47,7 +48,7 @@ _GENERIC_TOKENS = {
     "large", "small", "white", "black", "gray", "grey", "blue", "and",
     "for", "the", "with", "size", "color", "pair", "pairs", "boxes",
     "replacement", "injection", "venipuncture", "supply", "supplies",
-    "injection", "standard", "cuff", "advanced", "basic", "deluxe",
+    "standard", "cuff", "advanced", "basic", "deluxe",
     "system", "unit", "units", "piece", "pieces", "count", "each",
 }
 
@@ -182,6 +183,188 @@ def retrieve_similar_quotes(
 # Step 4 — Resolve line items against catalog
 # ---------------------------------------------------------------------------
 
+def _resolve_single_item(
+    item: dict,
+    emb: list[float],
+    cur,
+    email_text: str,
+) -> dict:
+    """
+    Resolve one requested item against the catalog using a pre-computed embedding.
+    Returns a single resolution dict (status resolved or unresolved).
+    """
+    emb_str = "[" + ",".join(str(x) for x in emb) + "]"
+
+    cur.execute(
+        """
+        SELECT
+            ni.source_item_id,
+            si.raw_name,
+            si.raw_manufacturer,
+            si.raw_price,
+            si.source,
+            si.source_url,
+            ni.category_bucket,
+            1 - (ni.embedding <=> %s::vector) AS similarity
+        FROM normalized_items ni
+        JOIN source_items si ON si.id = ni.source_item_id
+        WHERE ni.embedding IS NOT NULL
+        ORDER BY ni.embedding <=> %s::vector
+        LIMIT 5
+        """,
+        (emb_str, emb_str),
+    )
+    candidates = [dict(r) for r in cur.fetchall()]
+
+    if not candidates:
+        return {
+            "status": "unresolved",
+            "description": item["description"],
+            "quantity": item.get("quantity"),
+            "reason": "No products in catalog",
+        }
+
+    # --- SKU filter ---
+    # If the description contains an explicit SKU/model number
+    # (alphanumeric token with digits, e.g. LF00698U, IV-35, PP-AM-100M-MS),
+    # filter candidates to those whose raw_name contains that token.
+    # Search description, attributes list, AND the raw email — the parser
+    # sometimes places the SKU in attributes rather than the description text,
+    # and the raw email is the ground truth fallback for any case Claude drops.
+    attrs_text = " ".join(item.get("attributes") or [])
+    search_text = item["description"] + " " + attrs_text + " " + email_text
+    sku_match = re.search(r'\b([A-Z]{1,6}[-_]?\d[\w\-]{2,})\b', search_text)
+    if sku_match:
+        sku_token = sku_match.group(1).upper()
+        sku_filtered = [c for c in candidates if sku_token in c["raw_name"].upper()]
+        if sku_filtered:
+            log.info("  SKU filter '%s' → %d candidates", sku_token, len(sku_filtered))
+            candidates = sku_filtered
+
+    # --- Size filter ---
+    # If the email explicitly specified a size, filter candidates to those
+    # whose raw_name contains that size token (case-insensitive).
+    # This prevents silently picking the wrong size when multiple sizes
+    # score similarly.
+    size = (item.get("size") or "").strip().lower()
+    size_aliases = {
+        "small": ["small", " s ", "s,", "(s)"],
+        "medium": ["medium", " m ", "m,", "(m)"],
+        "large": ["large", " l ", "l,", "(l)"],
+        "xl": ["x-large", "xl", "x large", "extra large"],
+        "adult": ["adult"],
+        "pediatric": ["pediatric", "child", "junior"],
+        "infant": ["infant", "neonatal", "newborn"],
+    }
+    size_tokens = size_aliases.get(size, [size]) if size else []
+
+    size_actually_narrowed = False
+
+    if size_tokens:
+        size_filtered = [
+            c for c in candidates
+            if any(tok in c["raw_name"].lower() for tok in size_tokens)
+        ]
+        if not size_filtered:
+            return {
+                "status": "unresolved",
+                "description": item["description"],
+                "quantity": item.get("quantity"),
+                "reason": (
+                    f"Requested size '{size}' not found among top catalog matches. "
+                    f"Closest match was '{candidates[0]['raw_name'][:60]}' (sim={float(candidates[0]['similarity']):.3f}). "
+                    "Confirm correct size with customer or check catalog."
+                ),
+            }
+        # The filter discriminates only when it reduces the list to a single
+        # candidate. Removing one-of-five still leaves multiple close
+        # competitors — the remaining gap must resolve ambiguity on its own.
+        size_actually_narrowed = len(size_filtered) == 1
+        candidates = size_filtered
+
+    top = candidates[0]
+    top_sim = float(top["similarity"])
+    second_sim = float(candidates[1]["similarity"]) if len(candidates) > 1 else 0.0
+
+    # --- Threshold check ---
+    # When size filter narrowed to exactly one candidate, use a lower floor
+    # (SIZE_NARROWED_THRESHOLD) because we already have a size discriminator.
+    floor = SIZE_NARROWED_THRESHOLD if size_actually_narrowed else ITEM_RESOLUTION_THRESHOLD
+    if top_sim < floor:
+        return {
+            "status": "unresolved",
+            "description": item["description"],
+            "quantity": item.get("quantity"),
+            "reason": f"Best catalog match '{top['raw_name'][:60]}' has low confidence (similarity={top_sim:.3f}, threshold={floor})",
+        }
+
+    # --- Ambiguity check ---
+    # top-2 candidates within AMBIGUITY_GAP means the
+    # embedding can't distinguish them — ask the customer to clarify.
+    # Skipped only when the size filter demonstrably narrowed the candidate
+    # list, meaning the size token actually discriminated between options.
+    # If size was present but every candidate matched it (e.g. 'adult'
+    # appearing in all arm products), the filter changed nothing and
+    # ambiguity must still be checked.
+    if not size_actually_narrowed and len(candidates) > 1 and (top_sim - second_sim) < AMBIGUITY_GAP:
+        return {
+            "status": "unresolved",
+            "description": item["description"],
+            "quantity": item.get("quantity"),
+            "reason": (
+                f"Ambiguous: '{top['raw_name'][:55]}' (sim={top_sim:.3f}) "
+                f"vs '{candidates[1]['raw_name'][:55]}' (sim={second_sim:.3f}) score "
+                f"within {AMBIGUITY_GAP} — email does not specify which variant. "
+                "Ask customer to clarify."
+            ),
+        }
+
+    # --- Brand-token check ---
+    # If the item description contains meaningful brand/model tokens, at least
+    # one must appear in the matched product's name or manufacturer. Prevents
+    # resolving "Adenna nitrile gloves" to Sterling (high cosine, same category,
+    # wrong brand). Generic descriptions with no brand signal pass through.
+    desc_tokens = brand_tokens(item["description"])
+    if desc_tokens:
+        candidate_text = (
+            (top["raw_name"] or "") + " " + (top["raw_manufacturer"] or "")
+        ).lower()
+        if not any(tok in candidate_text for tok in desc_tokens):
+            log.warning(
+                "  brand mismatch: '%s' has tokens %s absent from '%s' — unresolved",
+                item["description"][:40], desc_tokens, top["raw_name"][:50],
+            )
+            return {
+                "status": "unresolved",
+                "description": item["description"],
+                "quantity": item.get("quantity"),
+                "reason": (
+                    f"Description contains brand/model signal {desc_tokens} "
+                    f"not found in closest catalog match '{top['raw_name'][:60]}' "
+                    f"(sim={top_sim:.3f}). Likely a wrong-brand result. "
+                    "Ask customer to confirm brand or provide a model number."
+                ),
+            }
+
+    log.info("  resolved '%s' → '%s' (sim=%.3f, price=$%s)",
+             item["description"][:40], top["raw_name"][:50],
+             top_sim, top["raw_price"])
+    return {
+        "status": "resolved",
+        "description": item["description"],
+        "quantity": item.get("quantity"),
+        "match": {
+            "source_item_id": top["source_item_id"],
+            "name": top["raw_name"],
+            "manufacturer": top["raw_manufacturer"],
+            "price": float(top["raw_price"]) if top["raw_price"] else None,
+            "source": top["source"],
+            "source_url": top["source_url"],
+            "similarity": top_sim,
+        },
+    }
+
+
 def resolve_line_items(
     requested_items: list[dict],
     conn,
@@ -200,181 +383,11 @@ def resolve_line_items(
     result = vc.embed(descriptions, model=VOYAGE_MODEL, input_type="query")
     embeddings = result.embeddings
 
-    resolutions = []
     with conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor) as cur:
-        for item, emb in zip(requested_items, embeddings):
-            emb_str = "[" + ",".join(str(x) for x in emb) + "]"
-
-            cur.execute(
-                """
-                SELECT
-                    ni.source_item_id,
-                    si.raw_name,
-                    si.raw_manufacturer,
-                    si.raw_price,
-                    si.source,
-                    si.source_url,
-                    ni.category_bucket,
-                    1 - (ni.embedding <=> %s::vector) AS similarity
-                FROM normalized_items ni
-                JOIN source_items si ON si.id = ni.source_item_id
-                WHERE ni.embedding IS NOT NULL
-                ORDER BY ni.embedding <=> %s::vector
-                LIMIT 5
-                """,
-                (emb_str, emb_str),
-            )
-            candidates = [dict(r) for r in cur.fetchall()]
-
-            if not candidates:
-                resolutions.append({
-                    "status": "unresolved",
-                    "description": item["description"],
-                    "quantity": item.get("quantity"),
-                    "reason": "No products in catalog",
-                })
-                continue
-
-            # --- SKU filter ---
-            # If the description contains an explicit SKU/model number
-            # (alphanumeric token with digits, e.g. LF00698U, IV-35, PP-AM-100M-MS),
-            # filter candidates to those whose raw_name contains that token.
-            # Search both the parsed description and the original email text so
-            # Claude's summarisation doesn't drop a parenthetical SKU.
-            search_text = item["description"] + " " + email_text
-            sku_match = re.search(r'\b([A-Z]{1,6}[-_]?\d[\w\-]{2,})\b', search_text)
-            if sku_match:
-                sku_token = sku_match.group(1).upper()
-                sku_filtered = [c for c in candidates if sku_token in c["raw_name"].upper()]
-                if sku_filtered:
-                    log.info("  SKU filter '%s' → %d candidates", sku_token, len(sku_filtered))
-                    candidates = sku_filtered
-
-            # --- Attribute filtering ---
-            # If the email explicitly specified a size, filter candidates to those
-            # whose raw_name contains that size token (case-insensitive).
-            # This prevents silently picking the wrong size when multiple sizes
-            # score similarly.
-            size = (item.get("size") or "").strip().lower()
-            size_aliases = {
-                "small": ["small", " s ", "s,", "(s)"],
-                "medium": ["medium", " m ", "m,", "(m)"],
-                "large": ["large", " l ", "l,", "(l)"],
-                "xl": ["x-large", "xl", "x large", "extra large"],
-                "adult": ["adult"],
-                "pediatric": ["pediatric", "child", "junior"],
-                "infant": ["infant", "neonatal", "newborn"],
-            }
-            size_tokens = size_aliases.get(size, [size]) if size else []
-
-            pre_filter_count = len(candidates)
-            size_actually_narrowed = False
-
-            if size_tokens:
-                # Filter to candidates whose name contains any matching token
-                size_filtered = [
-                    c for c in candidates
-                    if any(tok in c["raw_name"].lower() for tok in size_tokens)
-                ]
-                if not size_filtered:
-                    resolutions.append({
-                        "status": "unresolved",
-                        "description": item["description"],
-                        "quantity": item.get("quantity"),
-                        "reason": (
-                            f"Requested size '{size}' not found among top catalog matches. "
-                            f"Closest match was '{candidates[0]['raw_name'][:60]}' (sim={float(candidates[0]['similarity']):.3f}). "
-                            "Confirm correct size with customer or check catalog."
-                        ),
-                    })
-                    continue
-                # The filter discriminates only when it reduces the list to a single
-                # candidate. Removing one-of-five still leaves multiple close
-                # competitors — the remaining gap must resolve ambiguity on its own.
-                size_actually_narrowed = len(size_filtered) == 1
-                candidates = size_filtered
-
-            top = candidates[0]
-            top_sim = float(top["similarity"])
-            second_sim = float(candidates[1]["similarity"]) if len(candidates) > 1 else 0.0
-
-            if top_sim < ITEM_RESOLUTION_THRESHOLD:
-                resolutions.append({
-                    "status": "unresolved",
-                    "description": item["description"],
-                    "quantity": item.get("quantity"),
-                    "reason": f"Best catalog match '{top['raw_name'][:60]}' has low confidence (similarity={top_sim:.3f}, threshold={ITEM_RESOLUTION_THRESHOLD})",
-                })
-                continue
-
-            # Ambiguity check: top-2 candidates within AMBIGUITY_GAP means the
-            # embedding can't distinguish them — ask the customer to clarify.
-            # Skipped only when the size filter demonstrably narrowed the candidate
-            # list, meaning the size token actually discriminated between options.
-            # If size was present but every candidate matched it (e.g. 'adult'
-            # appearing in all arm products), the filter changed nothing and
-            # ambiguity must still be checked.
-            if not size_actually_narrowed and len(candidates) > 1 and (top_sim - second_sim) < AMBIGUITY_GAP:
-                resolutions.append({
-                    "status": "unresolved",
-                    "description": item["description"],
-                    "quantity": item.get("quantity"),
-                    "reason": (
-                        f"Ambiguous: '{top['raw_name'][:55]}' (sim={top_sim:.3f}) "
-                        f"vs '{candidates[1]['raw_name'][:55]}' (sim={second_sim:.3f}) score "
-                        f"within {AMBIGUITY_GAP} — email does not specify which variant. "
-                        "Ask customer to clarify."
-                    ),
-                })
-                continue
-
-            # Brand-token check: if the item description contains meaningful
-            # brand/model tokens, at least one must appear in the matched
-            # product's name or manufacturer. Prevents resolving "Adenna nitrile
-            # gloves" to Sterling (high cosine, same category, wrong brand).
-            # Generic descriptions with no brand signal (empty set) pass through.
-            desc_tokens = brand_tokens(item["description"])
-            if desc_tokens:
-                candidate_text = (
-                    (top["raw_name"] or "") + " " + (top["raw_manufacturer"] or "")
-                ).lower()
-                if not any(tok in candidate_text for tok in desc_tokens):
-                    log.warning(
-                        "  brand mismatch: '%s' has tokens %s absent from '%s' — unresolved",
-                        item["description"][:40], desc_tokens, top["raw_name"][:50],
-                    )
-                    resolutions.append({
-                        "status": "unresolved",
-                        "description": item["description"],
-                        "quantity": item.get("quantity"),
-                        "reason": (
-                            f"Description contains brand/model signal {desc_tokens} "
-                            f"not found in closest catalog match '{top['raw_name'][:60]}' "
-                            f"(sim={top_sim:.3f}). Likely a wrong-brand result. "
-                            "Ask customer to confirm brand or provide a model number."
-                        ),
-                    })
-                    continue
-
-            resolutions.append({
-                "status": "resolved",
-                "description": item["description"],
-                "quantity": item.get("quantity"),
-                "match": {
-                    "source_item_id": top["source_item_id"],
-                    "name": top["raw_name"],
-                    "manufacturer": top["raw_manufacturer"],
-                    "price": float(top["raw_price"]) if top["raw_price"] else None,
-                    "source": top["source"],
-                    "source_url": top["source_url"],
-                    "similarity": top_sim,
-                },
-            })
-            log.info("  resolved '%s' → '%s' (sim=%.3f, price=$%s)",
-                     item["description"][:40], top["raw_name"][:50],
-                     top_sim, top["raw_price"])
-
-    return resolutions
+        return [
+            _resolve_single_item(item, emb, cur, email_text)
+            for item, emb in zip(requested_items, embeddings)
+        ]
 
 
 # ---------------------------------------------------------------------------
@@ -619,7 +632,7 @@ Generate the complete quote now:"""
 
     msg = claude.messages.create(
         model="claude-sonnet-4-6",
-        max_tokens=2048,
+        max_tokens=4096,
         messages=[{"role": "user", "content": prompt}],
     )
     return msg.content[0].text
@@ -636,7 +649,8 @@ def run_pipeline(email_path: str, output_path: str) -> None:
     p = urlparse(os.environ["DATABASE_URL"])
     conn = psycopg2.connect(
         host=p.hostname, port=p.port or 5432,
-        dbname=p.path.lstrip("/"), user=p.username, password=p.password,
+        dbname=p.path.lstrip("/"), user=p.username,
+        password=urllib.parse.unquote(p.password or ""),
     )
 
     claude = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])

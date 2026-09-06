@@ -1,0 +1,170 @@
+```
+================================================================================
+                        MERIDIAN MEDICAL & DENTAL SUPPLY CO.
+                        1840 Commerce Park Drive, Suite 200
+                        Columbus, OH 43219
+                        Tel: (614) 555-0190  |  Fax: (614) 555-0191
+                        sales@meridianmedsupply.com
+================================================================================
+
+SALES QUOTATION
+
+Quote #:    QUOTE-NEW-2026-001
+Date:       2026-07-14
+Valid For:  30 days from quote date (expires 2026-08-13)
+Prepared By: Generated via RAG pipeline
+
+--------------------------------------------------------------------------------
+BILL TO / SHIP TO
+--------------------------------------------------------------------------------
+Customer:   Bay County EMS Training Division
+Attn:       [Contact Name — not provided]
+Address:    [Street Address — not provided]
+            [City, State ZIP — not provided]
+Phone:      [Not provided]
+Email:      training@baycountyems.org
+Account #:  [PENDING — new account, not yet assigned]
+Customer Type: New
+
+--------------------------------------------------------------------------------
+LINE ITEMS — CONFIRMED / PRICEABLE
+--------------------------------------------------------------------------------
+ #  | Product Description                          | Qty | Unit Price | Extended
+----|----------------------------------------------|-----|------------|----------
+ 1  | Simulaids 890 Deluxe Casualty Simulation Kit |     |            |
+    | with Bleeding Strap-On Wounds & Moulage      |  1  | $1,161.95  | $1,161.95
+    | (TCCC / tactical casualty care training;     |     |            |
+    |  includes tourniquet & wound packing         |     |            |
+    |  simulation components)                      |     |            |
+
+--------------------------------------------------------------------------------
+PRICING SUMMARY (CONFIRMED ITEMS ONLY)
+--------------------------------------------------------------------------------
+                                            Subtotal:          $1,161.95
+                    Volume Discount (3%, $1,000–$2,499 tier):    -$34.86
+                                   Freight / Handling:             $0.00
+                              --------------------------------
+                                               TOTAL:          $1,127.09
+
+--------------------------------------------------------------------------------
+DISCOUNT & FREIGHT REASONING
+--------------------------------------------------------------------------------
+Volume Discount:
+  The confirmed subtotal of $1,161.95 falls within the $1,000–$2,499 bracket
+  of the standard volume discount schedule (3%), consistent with the discount
+  schedule applied across historical quotes QUOTE-100349, QUOTE-100589, and
+  QUOTE-100421. The 3% tier is applied automatically at this subtotal level.
+
+  NOTE: If the three unresolved items (CPR manikins, pediatric simulator,
+  nitrile gloves) are subsequently quoted and added to this order, the combined
+  subtotal will very likely exceed $5,000, which would trigger the 8% volume
+  discount tier (as documented in QUOTE-100349 and QUOTE-100589). The discount
+  shown above reflects only the currently priceable line item and will be
+  recalculated when a complete order is assembled.
+
+Preferred Pricing:
+  Bay County EMS Training Division is a NEW account with 0 prior orders.
+  Preferred (below-list) pricing has NOT been applied. Per the pattern
+  documented in QUOTE-100589 (Gulf Coast EMS, repeat threshold at 3+ prior
+  orders in 12 months) and QUOTE-100421 (Metro EMS, 5 prior orders), preferred
+  pricing is reserved for accounts meeting the repeat-customer threshold.
+  All prices above reflect standard list pricing.
+
+Freight:
+  Order subtotal exceeds $500. Free freight applied (FOB Origin, contiguous US),
+  consistent with freight treatment in QUOTE-100349, QUOTE-100589, and
+  QUOTE-100421.
+
+--------------------------------------------------------------------------------
+⚠ ITEMS REQUIRING MANUAL REVIEW — NOT INCLUDED IN SUBTOTAL ABOVE ⚠
+--------------------------------------------------------------------------------
+The following three items requested by the customer could NOT be resolved to a
+unique catalog product with sufficient confidence. They are excluded from all
+pricing calculations above. Each item must be clarified before a firm price can
+be quoted.
+
+------------------------------------------------------------------------
+UNRESOLVED ITEM A — CPR Manikins with Feedback Monitors (Qty: 4)
+------------------------------------------------------------------------
+Customer Request:
+  "4 CPR manikins with feedback monitors (adult, mixed skin tones preferred)"
+
+Reason Not Resolved:
+  Two closely matched catalog products were identified, but their similarity
+  scores are within 0.02 of each other (ambiguous match). The customer's
+  request does not specify which variant is needed:
+
+    Option 1: Prestan PP-AM-100M-MS
+              Adult Medium Skin CPR Manikin with Monitor
+              (similarity score: 0.825)
+
+    Option 2: Prestan PP-AMP-100M-MS PRO+
+              Adult Medium Skin CPR Manikin with Monitor
+              (similarity score: 0.822)
+
+  For reference, both product lines appear in the historical quote record:
+    - PP-AMP-400M-MSDS PRO+ Diversity Kit 4-Pack with Monitor appeared in
+      QUOTE-100349 at $790.00/unit (list, new account).
+    - PP-AM-400M-MS (non-PRO+) appeared in QUOTE-100589 at $727.68/unit
+      (preferred pricing, repeat account).
+    - PP-AMP-100M-MS PRO+ and PP-AMP-100M-DS PRO+ (individual units) appeared
+      in QUOTE-100421 at $194.88/unit (preferred pricing, repeat account).
+  These historical prices are provided for context only and cannot be applied
+  to a new account without verified catalog list prices for the specific SKU.
+
+Action Required — Please advise customer:
+  (a) Do you require the standard Prestan manikin line (PP-AM series) or the
+      PRO+ line (PP-AMP series)?
+  (b) Are you looking for individual manikins (qty 4 single units) or a
+      4-pack kit?
+  (c) Do you require multiple skin tones (e.g., a diversity kit) or a
+      single medium-skin-tone option?
+  Once clarified, rep or catalog team should confirm list price before quoting.
+
+------------------------------------------------------------------------
+UNRESOLVED ITEM B — Advanced Pediatric Simulation System (Qty: 1)
+------------------------------------------------------------------------
+Customer Request:
+  "1 advanced pediatric simulation system with vital signs monitoring —
+   something that can simulate respiratory distress, medication response,
+   that kind of thing. Full-body if possible."
+
+Reason Not Resolved:
+  No pediatric-specific simulation system was found in the catalog at sufficient
+  confidence. The closest catalog match returned was:
+
+    Simulaids 501 Adult Airway Management Trainer with Realistic Anatomy
+    (similarity score: 0.817 — adult product, not pediatric)
+
+  This product does not meet the customer's stated specifications (pediatric,
+  full-body, vital signs monitoring, respiratory distress and medication
+  response simulation). Quoting an adult trainer as a substitute would be
+  incorrect and potentially unsuitable for TCCC/EMS pediatric training
+  protocols.
+
+Action Required:
+  Catalog team should perform a manual search for pediatric simulation systems
+  (e.g., pediatric patient simulators, infant/child full-body simulators with
+  physiological monitoring). Possible manufacturer lines to check include
+  Simulaids, Laerdal, Gaumard, CAE Healthcare, or similar. If no suitable
+  product is stocked, customer should be notified and a special-order or
+  referral option should be explored.
+  Note: Special-order simulator equipment is non-returnable per company policy.
+
+------------------------------------------------------------------------
+UNRESOLVED ITEM C — Nitrile Exam Gloves, Medium, ~200 Pairs (Qty: 200 pr)
+------------------------------------------------------------------------
+Customer Request:
+  "About 200 pairs of nitrile exam gloves for trainees (medium size, any
+   reputable brand)"
+
+Reason Not Resolved:
+  A likely catalog match was identified (Adenna Nitrile Powder-Free Exam
+  Gloves, similarity score: 0.859), but medium size could not be confirmed
+  as available in the catalog match. Glove products are typically size-specific
+  SKUs, and quoting an incorrect size would result in an unusable order for
+  the customer's trainees.
+
+  Additionally, per company Terms & Conditions, consumables including gloves
+  are final sale (no returns). Confirming the correct SKU before quoting is
+  especially important.

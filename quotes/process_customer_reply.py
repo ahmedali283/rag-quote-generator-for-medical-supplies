@@ -29,6 +29,7 @@ import logging
 import os
 import re
 import sys
+import urllib.parse
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -52,6 +53,10 @@ from quotes.generate_customer_email import generate_customer_email
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 log = logging.getLogger(__name__)
+
+# Lower similarity floor for customer-confirmed lookups: the customer told us
+# exactly what they want, so we're doing a name lookup rather than open search.
+CONFIRMED_ITEM_THRESHOLD = 0.65
 
 
 # ---------------------------------------------------------------------------
@@ -207,9 +212,8 @@ def resolve_by_name(
     top = candidates[0]
     top_sim = float(top["similarity"])
 
-    # For a customer-named item, use a slightly lower bar: 0.65 rather than 0.72.
     # The customer explicitly told us what they want; we're just looking it up.
-    if top_sim < 0.65:
+    if top_sim < CONFIRMED_ITEM_THRESHOLD:
         return {
             "status": "unresolved",
             "description": description,
@@ -398,7 +402,8 @@ def run_pipeline(
     p = urlparse(os.environ["DATABASE_URL"])
     conn = psycopg2.connect(
         host=p.hostname, port=p.port or 5432,
-        dbname=p.path.lstrip("/"), user=p.username, password=p.password,
+        dbname=p.path.lstrip("/"), user=p.username,
+        password=urllib.parse.unquote(p.password or ""),
     )
     claude = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     vc = voyageai.Client(api_key=os.environ["VOYAGE_API_KEY"])

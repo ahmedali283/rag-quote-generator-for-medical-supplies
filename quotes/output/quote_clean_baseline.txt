@@ -1,0 +1,153 @@
+```
+================================================================================
+                        MERIDIAN MEDICAL & DENTAL SUPPLY CO.
+                        1840 Commerce Park Drive, Suite 200
+                        Columbus, OH 43219
+                        Tel: (614) 555-0190  |  Fax: (614) 555-0191
+                        sales@meridianmedsupply.com
+================================================================================
+
+SALES QUOTATION
+
+Quote #:    QUOTE-NEW-004421-2026
+Date:       2026-04-15
+Valid For:  30 days from quote date (expires 2026-05-15)
+Prepared By: Generated via RAG pipeline
+
+--------------------------------------------------------------------------------
+BILL TO / SHIP TO
+--------------------------------------------------------------------------------
+Customer:   Riverside Community College, School of Nursing
+Attn:       Dr. Patricia Okafor, Director of Clinical Labs
+Address:    [Street Address on file — please confirm if update needed]
+            [City, State ZIP]
+Phone:      [Phone on file]
+Email:      p.okafor@riversidecc.edu
+Account #:  ACCT-004421          Customer Type: Repeat
+
+--------------------------------------------------------------------------------
+LINE ITEMS
+--------------------------------------------------------------------------------
+ #  | Product Description                          | Qty | Unit Price | Extended
+----|----------------------------------------------|-----|------------|----------
+ 1  | STERLING® 747112_CS Nitrile Exam Glove,      |     |            |
+    | Medium, Standard Cuff, Gray, Chemo Tested    |  15 |    $87.29  | $1,309.35
+    | [Preferred pricing applied: 3% below         |     |            |
+    |  catalog list of $89.99/cs. Per pattern      |     |            |
+    |  established in QUOTE-100142 and confirmed   |     |            |
+    |  in QUOTE-100327 for ACCT-004421.]           |     |            |
+    |                                              |     |            |
+ 2  | Life/form LF00698U Adult Venipuncture        |     |            |
+    | Injection Training Arm - White               |   3 |   $817.95  | $2,453.85
+    | [Catalog list price. No preferred pricing    |     |            |
+    |  documented for this product category for    |     |            |
+    |  ACCT-004421 in historical quotes.]          |     |            |
+    |                                              |     |            |
+ 3  | Life/form LF01122U Skin Vein Replacement     |     |            |
+    | Kit, White for Advanced IV Arm               |   6 |   $296.95  | $1,781.70
+    | [Catalog list price. No preferred pricing    |     |            |
+    |  documented for this product category for    |     |            |
+    |  ACCT-004421 in historical quotes.]          |     |            |
+
+--------------------------------------------------------------------------------
+PRICING SUMMARY
+--------------------------------------------------------------------------------
+                                            Subtotal:          $5,544.90
+                          Volume Discount (8%, $5,000+ tier):   -$443.59
+                                   Freight / Handling:              $0.00
+                              --------------------------------
+                                               TOTAL:          $5,101.31
+
+--------------------------------------------------------------------------------
+PRICING & DISCOUNT NOTES
+--------------------------------------------------------------------------------
+
+PREFERRED UNIT PRICING — LINE 1 (STERLING® Nitrile Gloves, Medium, Gray):
+  Catalog list price for STERLING® 747112_CS is $89.99/case (per resolved
+  catalog data). Preferred unit price of $87.29/case applied — representing
+  a 3% reduction below list price. This matches the documented preferred
+  pricing pattern for ACCT-004421 established in QUOTE-100142 (dated
+  2025-09-18) and reconfirmed in QUOTE-100327 (dated 2026-01-08), both of
+  which explicitly note: "Repeat customer — preferred unit pricing applied
+  on gloves (3% below list)." Account qualifies under the Repeat Customer
+  Pricing policy (6 prior orders in 12 months per QUOTE-100327).
+
+VOLUME DISCOUNT — 8% TIER:
+  Order subtotal of $5,544.90 exceeds the $5,000 threshold, qualifying for
+  the 8% volume discount tier per the Volume Discount Schedule. Note that
+  prior quotes for ACCT-004421 (QUOTE-100142, QUOTE-100327) applied the 5%
+  tier, as those orders fell in the $2,500–$4,999 range. This order's higher
+  subtotal places it in the 8% tier, consistent with the same schedule applied
+  to comparable nursing/clinical lab accounts in QUOTE-100255 and QUOTE-100398.
+  Discount amount: $5,544.90 × 8% = $443.59.
+
+FREIGHT:
+  Order subtotal ($5,544.90) exceeds $500 threshold. Free freight applied
+  within the contiguous US, consistent with all historical quotes on file for
+  this account and per standard freight policy.
+
+--------------------------------------------------------------------------------
+⚠  ITEMS REQUIRING MANUAL REVIEW — NOT INCLUDED IN TOTALS ABOVE
+--------------------------------------------------------------------------------
+The following item(s) could not be fully resolved and require clarification
+before a final price can be confirmed. Please do not submit a purchase order
+for these items until the details below are addressed.
+
+ ITEM:   Clinton Industries IV Pole, 5-Leg, 2-Hook — Qty: 2
+ STATUS: ⚠ UNRESOLVED — PENDING CUSTOMER CLARIFICATION
+
+ Reason: The catalog search returned two closely matched products with
+         overlapping descriptions and similarity scores within 0.02 of
+         each other:
+
+           Option A: Clinton Industries IV-35, 5-Leg, 2-Hook IV Pole
+                     (catalog similarity score: 0.899)
+           Option B: Clinton Industries IV-40, Economy 4-Leg, 2-Hook
+                     IV Pole (catalog similarity score: 0.892)
+
+         Dr. Okafor's email references "the Clinton 5-leg 2-hook ones
+         we ordered last time," which aligns most closely with Option A
+         (IV-35, 5-Leg). However, because the two catalog matches are
+         within the automated ambiguity threshold and the prior order
+         history for ACCT-004421 does not include IV poles, we cannot
+         confirm the correct model number with sufficient certainty.
+
+         Note: QUOTE-100398 (Jefferson Medical Center) includes the
+         Clinton Industries IV-35 at $158.55/unit, which may serve as
+         a pricing reference if Option A is confirmed — but this price
+         cannot be applied until the item is resolved.
+
+ ACTION REQUIRED:
+         Please reply to confirm which model you ordered previously:
+           • Clinton Industries IV-35 (5-Leg, 2-Hook) — standard model
+           • Clinton Industries IV-40 (4-Leg, 2-Hook) — economy model
+
+         Once confirmed, we will issue a revised quote addendum for the
+         2 units and confirm whether any adjustment to the volume discount
+         tier applies (the updated subtotal may remain in the 8% tier
+         depending on final unit price).
+
+         Contact: sales@meridianmedsupply.com | Tel: (614) 555-0190
+
+--------------------------------------------------------------------------------
+TERMS & CONDITIONS
+--------------------------------------------------------------------------------
+Payment Terms:  Net 30 (approved accounts) / Credit card at time of order
+Freight Terms:  FOB Origin. Orders over $500 ship free within the contiguous US.
+                Orders under $500: flat $18.50 freight.
+Returns:        Unopened items may be returned within 30 days with prior
+                authorization. Special-order simulator equipment is non-returnable.
+Warranty:       Manufacturer warranty applies to all simulator/manikin products.
+                Consumables (gloves, replacement skins, vein kits) are final sale.
+
+Volume Discount Schedule (applied automatically at order time):
+  $1,000 – $2,499 subtotal:   3% discount
+  $2,500 – $4,999 subtotal:   5% discount
+  $5,000+         subtotal:   8% discount
+
+Repeat Customer Pricing: Accounts with 3+ prior orders in the last 12 months
+  qualify for preferred unit pricing (typically 3–5% below list on select lines).
+  Preferred pricing is noted per line item where applicable.
+
+NOTE: Prices quoted are valid for 30 days. Simulator/manikin prices subject to
+manufacturer price changes. Glove and consumable

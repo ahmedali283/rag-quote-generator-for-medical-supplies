@@ -12,6 +12,7 @@ import json
 import logging
 import os
 import sys
+import urllib.parse
 from datetime import date
 from urllib.parse import urlparse
 
@@ -68,7 +69,8 @@ def run(dry_run: bool = False) -> dict:
     p = urlparse(os.environ["DATABASE_URL"])
     conn = psycopg2.connect(
         host=p.hostname, port=p.port or 5432,
-        dbname=p.path.lstrip("/"), user=p.username, password=p.password,
+        dbname=p.path.lstrip("/"), user=p.username,
+        password=urllib.parse.unquote(p.password or ""),
     )
     conn.autocommit = False
     psycopg2.extras.register_default_jsonb(conn)
