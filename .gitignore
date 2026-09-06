@@ -1,0 +1,25 @@
+# Environment / secrets
+.env
+.env.*
+*.pem
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node (for the webapp)
+node_modules/
+.next/
+webapp/frontend/.next/
+webapp/frontend/node_modules/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Logs (large, regenerable, not meant to be version-controlled)
+logs/
+*.log

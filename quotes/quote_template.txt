@@ -1,0 +1,73 @@
+================================================================================
+                        MERIDIAN MEDICAL & DENTAL SUPPLY CO.
+                        1840 Commerce Park Drive, Suite 200
+                        Columbus, OH 43219
+                        Tel: (614) 555-0190  |  Fax: (614) 555-0191
+                        sales@meridianmedsupply.com
+================================================================================
+
+SALES QUOTATION
+
+Quote #:    [QUOTE-XXXXXX]
+Date:       [YYYY-MM-DD]
+Valid For:  30 days from quote date
+Prepared By: [Rep Name], [Title]
+
+--------------------------------------------------------------------------------
+BILL TO / SHIP TO
+--------------------------------------------------------------------------------
+Customer:   [Institution Name]
+Attn:       [Contact Name], [Title]
+Address:    [Street Address]
+            [City, State ZIP]
+Phone:      [Phone]
+Email:      [Email]
+Account #:  [ACCT-XXXXXX]   Customer Type: [New / Repeat]
+
+--------------------------------------------------------------------------------
+LINE ITEMS
+--------------------------------------------------------------------------------
+ #  | Product Description                          | Qty | Unit Price | Extended
+----|----------------------------------------------|-----|------------|----------
+ 1  | [Product Name / SKU]                         |  X  |   $XXX.XX  | $X,XXX.XX
+ 2  | [Product Name / SKU]                         |  X  |   $XXX.XX  | $X,XXX.XX
+ 3  | [Product Name / SKU]                         |  X  |   $XXX.XX  | $X,XXX.XX
+    |                                              |     |            |
+    | (Add rows as needed, max 6 per quote page)   |     |            |
+
+--------------------------------------------------------------------------------
+PRICING SUMMARY
+--------------------------------------------------------------------------------
+                                            Subtotal:          $X,XXX.XX
+                        Volume Discount ([X]%, if applicable):  -$XXX.XX
+                                   Freight / Handling:           $XXX.XX
+                              --------------------------------
+                                               TOTAL:          $X,XXX.XX
+
+--------------------------------------------------------------------------------
+TERMS & CONDITIONS
+--------------------------------------------------------------------------------
+Payment Terms:  Net 30 (approved accounts) / Credit card at time of order
+Freight Terms:  FOB Origin. Orders over $500 ship free within the contiguous US.
+                Orders under $500: flat $18.50 freight.
+Returns:        Unopened items may be returned within 30 days with prior
+                authorization. Special-order simulator equipment is non-returnable.
+Warranty:       Manufacturer warranty applies to all simulator/manikin products.
+                Consumables (gloves, replacement skins, vein kits) are final sale.
+
+Volume Discount Schedule (applied automatically at order time):
+  $1,000 – $2,499 subtotal:   3% discount
+  $2,500 – $4,999 subtotal:   5% discount
+  $5,000+         subtotal:   8% discount
+
+Repeat Customer Pricing: Accounts with 3+ prior orders in the last 12 months
+  qualify for preferred unit pricing (typically 3–5% below list on select lines).
+  Preferred pricing is noted per line item where applicable.
+
+NOTE: Prices quoted are valid for 30 days. Simulator/manikin prices subject to
+manufacturer price changes. Glove and consumable pricing may fluctuate with
+supply. Contact your rep to confirm pricing before placing order.
+
+================================================================================
+                    Thank you for your business!
+================================================================================

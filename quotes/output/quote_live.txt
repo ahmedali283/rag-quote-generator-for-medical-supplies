@@ -1,0 +1,175 @@
+```
+================================================================================
+                        MERIDIAN MEDICAL & DENTAL SUPPLY CO.
+                        1840 Commerce Park Drive, Suite 200
+                        Columbus, OH 43219
+                        Tel: (614) 555-0190  |  Fax: (614) 555-0191
+                        sales@meridianmedsupply.com
+================================================================================
+
+SALES QUOTATION
+
+Quote #:    QUOTE-NEW-2025-07-14
+Date:       2025-07-14
+Valid For:  30 days from quote date (expires 2025-08-13)
+Prepared By: Generated via RAG pipeline
+
+--------------------------------------------------------------------------------
+BILL TO / SHIP TO
+--------------------------------------------------------------------------------
+Customer:   Example Nursing School
+Attn:       Procurement Office
+Address:    [Street Address — on file or to be confirmed]
+            [City, State ZIP]
+Phone:      [Phone — on file or to be confirmed]
+Email:      procurement@example-nursing-school.edu
+Account #:  [ACCT-PENDING]       Customer Type: New
+
+--------------------------------------------------------------------------------
+LINE ITEMS
+--------------------------------------------------------------------------------
+ #  | Product Description                          | Qty | Unit Price | Extended
+----|----------------------------------------------|-----|------------|----------
+ 1  | STERLING® Nitrile Exam Glove, Medium,        |  10 |   $501.58  | $5,015.80
+    | Standard Cuff, Gray, Chemo Tested            |     |            |
+    | SKU: 747112_CS | Source: MediDepot           |     |            |
+    | (Catalog list price — no preferred pricing   |     |            |
+    | applicable; new account, no prior history)   |     |            |
+    |                                              |     |            |
+ 2  | *** SEE "ITEMS REQUIRING MANUAL REVIEW"  *** |  2  |    TBD     |    TBD
+    | Adult Venipuncture Training Arm              |     |            |
+    |                                              |     |            |
+ 3  | *** SEE "ITEMS REQUIRING MANUAL REVIEW"  *** | TBD |    TBD     |    TBD
+    | SuperFlex Deluxe Manikin                     |     |            |
+
+--------------------------------------------------------------------------------
+PRICING SUMMARY  (Resolved items only — pending items excluded)
+--------------------------------------------------------------------------------
+                                            Subtotal:          $5,015.80
+
+                    Volume Discount (8% — subtotal ≥ $5,000):   -$401.26
+                    [No historical quote available to cite.
+                     Discount applied per published Volume
+                     Discount Schedule: $5,000+ tier = 8%.]
+
+                                   Freight / Handling:             $0.00
+                    [Order subtotal after discount = $4,614.54,
+                     which exceeds $500 threshold; however, the
+                     pre-discount subtotal of $5,015.80 already
+                     exceeds $500. Free freight applies per
+                     published freight policy: FOB Origin,
+                     orders over $500 ship free within the
+                     contiguous US.]
+
+                              --------------------------------
+                     TOTAL (Resolved Items Only):          $4,614.54
+                              ================================
+  *** FINAL ORDER TOTAL WILL CHANGE once unresolved items
+      are confirmed and added. ***
+
+--------------------------------------------------------------------------------
+DISCOUNT & PRICING NOTES
+--------------------------------------------------------------------------------
+ • Preferred Pricing: NOT applied. No historical quotes were found for this
+   customer or account. Preferred pricing requires 3+ prior orders in the
+   last 12 months; this is a new account.
+
+ • Volume Discount: 8% applied to resolved subtotal of $5,015.80 per the
+   published Volume Discount Schedule ($5,000+ tier). No historical quote
+   was available to establish a customer-specific discount pattern; the
+   standard published schedule is used as written.
+   NOTE: If unresolved items are added and the final subtotal changes tier,
+   the discount percentage will be recalculated at order confirmation.
+
+ • Glove & Consumable Pricing: The unit price of $501.58/case for
+   STERLING® 747112_CS is used exactly as returned by the catalog pipeline.
+   Consumable pricing may fluctuate with supply. Please confirm pricing
+   before placing order.
+
+--------------------------------------------------------------------------------
+ITEMS REQUIRING MANUAL REVIEW
+(Not included in subtotal — customer action required before order can proceed)
+--------------------------------------------------------------------------------
+
+ITEM A — Adult Venipuncture Training Arm (Qty: 2)
+  Status:  ⚠ UNRESOLVED — Catalog match is ambiguous
+  Reason:  Two catalog entries returned similarity scores within 0.02 of
+           each other, and the customer's request does not specify which
+           variant is needed:
+
+    Option 1: Life/form LF00698U
+              Adult Venipuncture Injection Training [Arm — full title TBC]
+              Similarity score: 0.843
+
+    Option 2: Nasco Life/form®
+              Adult Venipuncture and Injection Train[ing Arm — full title TBC]
+              Similarity score: 0.833
+
+  Action Required: Please reply indicating which variant (Option 1 or
+  Option 2) you require, or provide the full product name / SKU. Once
+  confirmed, we will issue a revised quotation with firm pricing for
+  both units.
+
+--------------------------------------------------------------------------------
+
+ITEM B — SuperFlex Deluxe Manikin (Qty: Not specified)
+  Status:  ⚠ UNRESOLVED — Catalog match is ambiguous; quantity not stated
+  Reason:  (a) The product name "SuperFlex Deluxe Manikin" did not return
+               a high-confidence unique catalog match. Two entries returned
+               similarity scores within 0.02 of each other and neither
+               appears to correspond clearly to this product name:
+
+    Option 1: Simulaids 1326
+              Adult Water Rescue Manikin with Buoyancy [full title TBC]
+              Similarity score: 0.773
+
+    Option 2: Simulaids 1377
+              Forceps/Vacuum Delivery OB Manikin with [full title TBC]
+              Similarity score: 0.766
+
+           (b) No quantity was specified in the request.
+
+  Action Required: Please confirm (1) whether either Simulaids option
+  above matches your intended product, or provide the manufacturer name,
+  full product name, or SKU for the "SuperFlex Deluxe Manikin," and
+  (2) the quantity you require. If this is a special-order simulator,
+  please note that simulator/manikin equipment is NON-RETURNABLE per
+  our standard terms. Once confirmed, we will issue a revised quotation.
+
+--------------------------------------------------------------------------------
+TERMS & CONDITIONS
+--------------------------------------------------------------------------------
+Payment Terms:  Net 30 (approved accounts) / Credit card at time of order
+Freight Terms:  FOB Origin. Orders over $500 ship free within the contiguous
+                US. Orders under $500: flat $18.50 freight.
+Returns:        Unopened items may be returned within 30 days with prior
+                authorization. Special-order simulator equipment is
+                non-returnable.
+Warranty:       Manufacturer warranty applies to all simulator/manikin
+                products. Consumables (gloves, replacement skins, vein kits)
+                are final sale.
+
+Volume Discount Schedule (applied automatically at order time):
+  $1,000 – $2,499 subtotal:   3% discount
+  $2,500 – $4,999 subtotal:   5% discount
+  $5,000+         subtotal:   8% discount
+
+NOTE: Prices quoted are valid for 30 days from quote date. Simulator/manikin
+prices are subject to manufacturer price changes. Glove and consumable pricing
+may fluctuate with supply. Contact your rep to confirm pricing before placing
+your order. Final order total and discount tier will be recalculated once all
+unresolved items are confirmed.
+
+================================================================================
+NEXT STEPS
+================================================================================
+ 1. Please reply to sales@meridianmedsupply.com referencing Quote #
+    QUOTE-NEW-2025-07-14 with your clarifications for Items A and B above.
+ 2. Once all items are resolved, a revised final quotation will be issued.
+ 3. To place an order on the resolved glove line item now, please contact
+    us and reference this quote number.
+================================================================================
+                       Thank you for your business!
+          We look forward to supporting your new nursing lab.
+================================================================================
+```

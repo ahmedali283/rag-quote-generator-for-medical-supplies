@@ -1,0 +1,1068 @@
+[
+  {
+    "quote_id": "QUOTE-100142",
+    "date": "2025-09-18",
+    "customer": {
+      "name": "Riverside Community College — School of Nursing",
+      "segment": "nursing_school",
+      "contact": "Dr. Patricia Okafor, Director of Clinical Labs",
+      "account_id": "ACCT-004421",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 5
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Repeat customer — preferred unit pricing applied on gloves (3% below list). Annual lab restocking order.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "STERLING® 747112_CS Nitrile Exam Glove, Medium, Standard Cuff, Gray, Chemo Tested",
+        "sku": "747112_CS",
+        "qty": 10,
+        "list_price": 89.99,
+        "unit_price": 87.29,
+        "preferred_pricing": true,
+        "extended": 872.90
+      },
+      {
+        "line": 2,
+        "product": "STERLING® 761282_CS Nitrile Exam Glove, Large, Standard Cuff, Gray, Chemo Tested",
+        "sku": "761282_CS",
+        "qty": 8,
+        "list_price": 89.99,
+        "unit_price": 87.29,
+        "preferred_pricing": true,
+        "extended": 698.32
+      },
+      {
+        "line": 3,
+        "product": "Life/form LF00698U Adult Venipuncture Injection Training Arm - White",
+        "sku": "LF00698U",
+        "qty": 2,
+        "list_price": 817.95,
+        "unit_price": 817.95,
+        "preferred_pricing": false,
+        "extended": 1635.90
+      },
+      {
+        "line": 4,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 4,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 1187.80
+      }
+    ],
+    "subtotal": 4394.92,
+    "volume_discount_pct": 5,
+    "volume_discount_amt": 219.75,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 4175.17
+  },
+
+  {
+    "quote_id": "QUOTE-100178",
+    "date": "2025-10-03",
+    "customer": {
+      "name": "St. Augustine Hospital — Simulation Center",
+      "segment": "hospital_sim_lab",
+      "contact": "Marcus Chen, Simulation Lab Coordinator",
+      "account_id": "ACCT-007833",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "New account. Outfitting new sim lab. Standard list pricing applied.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Prestan PP-AM-400M-MSDS Professional Adult CPR Diversity Kit 4-Pack with Monitor",
+        "sku": "PP-AM-400M-MSDS",
+        "qty": 3,
+        "list_price": 758.00,
+        "unit_price": 758.00,
+        "preferred_pricing": false,
+        "extended": 2274.00
+      },
+      {
+        "line": 2,
+        "product": "Life/form LF03602U Adult Airway Management Trainer Manikin Torso",
+        "sku": "LF03602U",
+        "qty": 2,
+        "list_price": 1698.95,
+        "unit_price": 1698.95,
+        "preferred_pricing": false,
+        "extended": 3397.90
+      },
+      {
+        "line": 3,
+        "product": "Clinton Industries IV-35 5-Leg, 2-Hook IV Pole",
+        "sku": "IV-35",
+        "qty": 6,
+        "list_price": 158.55,
+        "unit_price": 158.55,
+        "preferred_pricing": false,
+        "extended": 951.30
+      }
+    ],
+    "subtotal": 6623.20,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 529.86,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 6093.34
+  },
+
+  {
+    "quote_id": "QUOTE-100201",
+    "date": "2025-10-17",
+    "customer": {
+      "name": "Metro EMS Training Academy",
+      "segment": "ems_program",
+      "contact": "Chief Instructor Ray Kowalski",
+      "account_id": "ACCT-003156",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 4
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Repeat customer — preferred pricing on CPR manikins (4% below list). EMS annual refresh.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Prestan PP-AM-100M-DS Adult Dark Skin CPR Manikin with Monitor",
+        "sku": "PP-AM-100M-DS",
+        "qty": 6,
+        "list_price": 195.00,
+        "unit_price": 187.20,
+        "preferred_pricing": true,
+        "extended": 1123.20
+      },
+      {
+        "line": 2,
+        "product": "Prestan PP-AM-100M-MS Adult Medium Skin CPR Manikin with Monitor",
+        "sku": "PP-AM-100M-MS",
+        "qty": 6,
+        "list_price": 195.00,
+        "unit_price": 187.20,
+        "preferred_pricing": true,
+        "extended": 1123.20
+      },
+      {
+        "line": 3,
+        "product": "Simulaids 1602 Adult Choking Manikin with Anatomical References",
+        "sku": "SIM-1602",
+        "qty": 2,
+        "list_price": 529.95,
+        "unit_price": 529.95,
+        "preferred_pricing": false,
+        "extended": 1059.90
+      },
+      {
+        "line": 4,
+        "product": "Simulaids 1620 Child Choking Manikin with Anatomical References",
+        "sku": "SIM-1620",
+        "qty": 2,
+        "list_price": 285.95,
+        "unit_price": 285.95,
+        "preferred_pricing": false,
+        "extended": 571.90
+      }
+    ],
+    "subtotal": 3878.20,
+    "volume_discount_pct": 5,
+    "volume_discount_amt": 193.91,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 3684.29
+  },
+
+  {
+    "quote_id": "QUOTE-100229",
+    "date": "2025-11-04",
+    "customer": {
+      "name": "Westview Dental Group",
+      "segment": "dental_clinic",
+      "contact": "Office Manager Linda Tran",
+      "account_id": "ACCT-009012",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 7
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "High-frequency repeat customer — preferred pricing on all glove lines (5% below list). Quarterly glove restock.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Aurelia Perform GREEN Nitrile Powder-Free Exam Gloves 200/box",
+        "sku": "AUR-PERFORM-GRN",
+        "qty": 20,
+        "list_price": 11.99,
+        "unit_price": 11.39,
+        "preferred_pricing": true,
+        "extended": 227.80
+      },
+      {
+        "line": 2,
+        "product": "Contour Plus Nitrile Exam Gloves, 100/Pkg (Cranberry)",
+        "sku": "CRB-CONTOUR-PLUS",
+        "qty": 15,
+        "list_price": 12.99,
+        "unit_price": 12.34,
+        "preferred_pricing": true,
+        "extended": 185.10
+      },
+      {
+        "line": 3,
+        "product": "Gloves Latex Powder-Free 100/Box (Skintx)",
+        "sku": "STX-LATEX-PF",
+        "qty": 10,
+        "list_price": 14.99,
+        "unit_price": 14.24,
+        "preferred_pricing": true,
+        "extended": 142.40
+      }
+    ],
+    "subtotal": 555.30,
+    "volume_discount_pct": 3,
+    "volume_discount_amt": 16.66,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 538.64
+  },
+
+  {
+    "quote_id": "QUOTE-100255",
+    "date": "2025-11-19",
+    "customer": {
+      "name": "Lakewood University — College of Health Sciences Clinical Skills Lab",
+      "segment": "clinical_skills_lab",
+      "contact": "Prof. Anita Sharma, Lab Director",
+      "account_id": "ACCT-005540",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "New account, grant-funded lab setup. No preferred pricing — standard list applied.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Nasco Life/form® Advanced Venipuncture and Injection Arm with IV Arm Circulation",
+        "sku": "LF01004U",
+        "qty": 4,
+        "list_price": 1124.00,
+        "unit_price": 1124.00,
+        "preferred_pricing": false,
+        "extended": 4496.00
+      },
+      {
+        "line": 2,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 8,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 2375.60
+      },
+      {
+        "line": 3,
+        "product": "MidCentral IVP221 Stainless Steel 5-leg Space Saving IV Pole",
+        "sku": "IVP221",
+        "qty": 4,
+        "list_price": 330.59,
+        "unit_price": 330.59,
+        "preferred_pricing": false,
+        "extended": 1322.36
+      },
+      {
+        "line": 4,
+        "product": "STERLING® 747112_CS Nitrile Exam Glove, Medium, Standard Cuff, Gray",
+        "sku": "747112_CS",
+        "qty": 5,
+        "list_price": 89.99,
+        "unit_price": 89.99,
+        "preferred_pricing": false,
+        "extended": 449.95
+      }
+    ],
+    "subtotal": 8643.91,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 691.51,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 7952.40
+  },
+
+  {
+    "quote_id": "QUOTE-100280",
+    "date": "2025-12-02",
+    "customer": {
+      "name": "Northgate Community Hospital — ED Skills Lab",
+      "segment": "hospital_sim_lab",
+      "contact": "Nursing Educator Beth Carmichael, RN",
+      "account_id": "ACCT-007291",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 3
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "Repeat customer — preferred pricing on venipuncture arms (3% below list). Year-end budget spend.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Life/form LF00698U Adult Venipuncture Injection Training Arm - White",
+        "sku": "LF00698U",
+        "qty": 3,
+        "list_price": 817.95,
+        "unit_price": 793.41,
+        "preferred_pricing": true,
+        "extended": 2380.23
+      },
+      {
+        "line": 2,
+        "product": "Life/form LF01131U Venipuncture Injection Demonstration Arm",
+        "sku": "LF01131U",
+        "qty": 1,
+        "list_price": 945.00,
+        "unit_price": 916.65,
+        "preferred_pricing": true,
+        "extended": 916.65
+      },
+      {
+        "line": 3,
+        "product": "MediVena One-Care Push Button Safety Blood Collection Wing Sets, Pre-attached Holders",
+        "sku": "MV-PUSHBTN-PRE",
+        "qty": 2,
+        "list_price": 960.00,
+        "unit_price": 960.00,
+        "preferred_pricing": false,
+        "extended": 1920.00
+      }
+    ],
+    "subtotal": 5216.88,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 417.35,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 4799.53
+  },
+
+  {
+    "quote_id": "QUOTE-100301",
+    "date": "2025-12-15",
+    "customer": {
+      "name": "Tri-County Dental Associates",
+      "segment": "dental_clinic",
+      "contact": "Dr. Michael Reyes",
+      "account_id": "ACCT-009344",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "New account, small order. No volume discount — under $1,000 subtotal. Freight applies.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "MidKnight TOUCH Black Nitrile Gloves 100/pk (Ansell)",
+        "sku": "ANS-MIDKNIGHT",
+        "qty": 5,
+        "list_price": 10.99,
+        "unit_price": 10.99,
+        "preferred_pricing": false,
+        "extended": 54.95
+      },
+      {
+        "line": 2,
+        "product": "Aurelia Quest WHITE Nitrile Powder Free Exam Glove 100/box",
+        "sku": "AUR-QUEST-WHT",
+        "qty": 5,
+        "list_price": 16.99,
+        "unit_price": 16.99,
+        "preferred_pricing": false,
+        "extended": 84.95
+      },
+      {
+        "line": 3,
+        "product": "Gloves Utility (Hu-Friedy)",
+        "sku": "HF-UTIL-GLOVE",
+        "qty": 3,
+        "list_price": 23.99,
+        "unit_price": 23.99,
+        "preferred_pricing": false,
+        "extended": 71.97
+      }
+    ],
+    "subtotal": 211.87,
+    "volume_discount_pct": 0,
+    "volume_discount_amt": 0.00,
+    "freight": 18.50,
+    "freight_note": "Standard freight — order under $500",
+    "total": 230.37
+  },
+
+  {
+    "quote_id": "QUOTE-100327",
+    "date": "2026-01-08",
+    "customer": {
+      "name": "Riverside Community College — School of Nursing",
+      "segment": "nursing_school",
+      "contact": "Dr. Patricia Okafor, Director of Clinical Labs",
+      "account_id": "ACCT-004421",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 6
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Same repeat account as QUOTE-100142. Preferred pricing on gloves continues (3% below list). Additional CPR manikins added — no preferred pricing on new product category.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "STERLING® 747112_CS Nitrile Exam Glove, Medium, Standard Cuff, Gray, Chemo Tested",
+        "sku": "747112_CS",
+        "qty": 12,
+        "list_price": 89.99,
+        "unit_price": 87.29,
+        "preferred_pricing": true,
+        "extended": 1047.48
+      },
+      {
+        "line": 2,
+        "product": "Prestan PP-AFM-100M-MS Professional Female Medium Skin CPR Manikin with Monitor",
+        "sku": "PP-AFM-100M-MS",
+        "qty": 4,
+        "list_price": 195.00,
+        "unit_price": 195.00,
+        "preferred_pricing": false,
+        "extended": 780.00
+      },
+      {
+        "line": 3,
+        "product": "Prestan PP-AFM-100M-DS Professional Female Dark Skin CPR Manikin with Monitor",
+        "sku": "PP-AFM-100M-DS",
+        "qty": 4,
+        "list_price": 195.00,
+        "unit_price": 195.00,
+        "preferred_pricing": false,
+        "extended": 780.00
+      }
+    ],
+    "subtotal": 2607.48,
+    "volume_discount_pct": 5,
+    "volume_discount_amt": 130.37,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 2477.11
+  },
+
+  {
+    "quote_id": "QUOTE-100349",
+    "date": "2026-01-22",
+    "customer": {
+      "name": "Gulf Coast EMS Regional Training Center",
+      "segment": "ems_program",
+      "contact": "Training Director Sandra Mejia",
+      "account_id": "ACCT-003489",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "New account. Large initial order for new training facility. Standard list pricing.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Simulaids 501 Adult Airway Management Trainer with Realistic Anatomy",
+        "sku": "SIM-501",
+        "qty": 2,
+        "list_price": 2341.95,
+        "unit_price": 2341.95,
+        "preferred_pricing": false,
+        "extended": 4683.90
+      },
+      {
+        "line": 2,
+        "product": "Simulaids 1615 Adolescent Choking Manikin with Anatomical References",
+        "sku": "SIM-1615",
+        "qty": 3,
+        "list_price": 342.95,
+        "unit_price": 342.95,
+        "preferred_pricing": false,
+        "extended": 1028.85
+      },
+      {
+        "line": 3,
+        "product": "Prestan PP-AMP-400M-MSDS PRO+ Adult CPR Diversity Kit 4-Pack with Monitor",
+        "sku": "PP-AMP-400M-MSDS",
+        "qty": 2,
+        "list_price": 790.00,
+        "unit_price": 790.00,
+        "preferred_pricing": false,
+        "extended": 1580.00
+      },
+      {
+        "line": 4,
+        "product": "Simulaids 135 Deluxe Cricothyrotomy Simulator with 4 Overlay Skins & Carry Bag",
+        "sku": "SIM-135",
+        "qty": 2,
+        "list_price": 476.95,
+        "unit_price": 476.95,
+        "preferred_pricing": false,
+        "extended": 953.90
+      }
+    ],
+    "subtotal": 8246.65,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 659.73,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 7586.92
+  },
+
+  {
+    "quote_id": "QUOTE-100371",
+    "date": "2026-02-05",
+    "customer": {
+      "name": "Westview Dental Group",
+      "segment": "dental_clinic",
+      "contact": "Office Manager Linda Tran",
+      "account_id": "ACCT-009012",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 8
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "Same repeat account as QUOTE-100229. Preferred pricing maintained (5% below list). Added vinyl gloves to the mix.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Aurelia Perform GREEN Nitrile Powder-Free Exam Gloves 200/box",
+        "sku": "AUR-PERFORM-GRN",
+        "qty": 25,
+        "list_price": 11.99,
+        "unit_price": 11.39,
+        "preferred_pricing": true,
+        "extended": 284.75
+      },
+      {
+        "line": 2,
+        "product": "Gloves Vinyl Exam Powder-Free 100/Box (SkinTx)",
+        "sku": "STX-VINYL-PF",
+        "qty": 20,
+        "list_price": 12.99,
+        "unit_price": 12.34,
+        "preferred_pricing": true,
+        "extended": 246.80
+      },
+      {
+        "line": 3,
+        "product": "Aurelia Luminance Latex Exam Glove Powder Free Polymer Coating 100/box",
+        "sku": "AUR-LUMINANCE",
+        "qty": 10,
+        "list_price": 13.99,
+        "unit_price": 13.29,
+        "preferred_pricing": true,
+        "extended": 132.90
+      }
+    ],
+    "subtotal": 664.45,
+    "volume_discount_pct": 3,
+    "volume_discount_amt": 19.93,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 644.52
+  },
+
+  {
+    "quote_id": "QUOTE-100398",
+    "date": "2026-02-19",
+    "customer": {
+      "name": "Jefferson Medical Center — Nursing Education Department",
+      "segment": "hospital_sim_lab",
+      "contact": "Director of Nursing Education Carol Watts, MSN",
+      "account_id": "ACCT-007604",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "New account. IV training setup for nursing residency program. Standard list pricing.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Nasco Life/form® Adult Venipuncture and Injection Training Arm, Dark or Light Skin Tone",
+        "sku": "LF00985U",
+        "qty": 6,
+        "list_price": 749.00,
+        "unit_price": 749.00,
+        "preferred_pricing": false,
+        "extended": 4494.00
+      },
+      {
+        "line": 2,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 12,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 3563.40
+      },
+      {
+        "line": 3,
+        "product": "Clinton Industries IV-35 5-Leg, 2-Hook IV Pole",
+        "sku": "IV-35",
+        "qty": 6,
+        "list_price": 158.55,
+        "unit_price": 158.55,
+        "preferred_pricing": false,
+        "extended": 951.30
+      },
+      {
+        "line": 4,
+        "product": "XCEED® 763377_CS Nitrile Exam Glove, Medium, Standard Cuff Length, Blue",
+        "sku": "763377_CS",
+        "qty": 4,
+        "list_price": 89.99,
+        "unit_price": 89.99,
+        "preferred_pricing": false,
+        "extended": 359.96
+      }
+    ],
+    "subtotal": 9368.66,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 749.49,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 8619.17
+  },
+
+  {
+    "quote_id": "QUOTE-100421",
+    "date": "2026-03-04",
+    "customer": {
+      "name": "Metro EMS Training Academy",
+      "segment": "ems_program",
+      "contact": "Chief Instructor Ray Kowalski",
+      "account_id": "ACCT-003156",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 5
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Same repeat account as QUOTE-100201. Preferred pricing on CPR manikins continues (4% below list). Adding airway trainer — new product line for this customer, list price.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Prestan PP-AMP-100M-DS PRO+ Adult Dark Skin CPR Manikin with Monitor",
+        "sku": "PP-AMP-100M-DS",
+        "qty": 4,
+        "list_price": 203.00,
+        "unit_price": 194.88,
+        "preferred_pricing": true,
+        "extended": 779.52
+      },
+      {
+        "line": 2,
+        "product": "Prestan PP-AMP-100M-MS PRO+ Adult Medium Skin CPR Manikin with Monitor",
+        "sku": "PP-AMP-100M-MS",
+        "qty": 4,
+        "list_price": 203.00,
+        "unit_price": 194.88,
+        "preferred_pricing": true,
+        "extended": 779.52
+      },
+      {
+        "line": 3,
+        "product": "Simulaids 500 Economy Adult Airway Management Trainer Head",
+        "sku": "SIM-500",
+        "qty": 2,
+        "list_price": 1336.95,
+        "unit_price": 1336.95,
+        "preferred_pricing": false,
+        "extended": 2673.90
+      }
+    ],
+    "subtotal": 4232.94,
+    "volume_discount_pct": 5,
+    "volume_discount_amt": 211.65,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 4021.29
+  },
+
+  {
+    "quote_id": "QUOTE-100447",
+    "date": "2026-03-20",
+    "customer": {
+      "name": "Summit Allied Health Institute — Clinical Skills Lab",
+      "segment": "clinical_skills_lab",
+      "contact": "Lab Supervisor Tony Ferrara",
+      "account_id": "ACCT-005819",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "New account. Small initial order — testing our catalog. No volume discount. Freight applies.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Life/form LF00698U Adult Venipuncture Injection Training Arm - White",
+        "sku": "LF00698U",
+        "qty": 1,
+        "list_price": 817.95,
+        "unit_price": 817.95,
+        "preferred_pricing": false,
+        "extended": 817.95
+      },
+      {
+        "line": 2,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 2,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 593.90
+      }
+    ],
+    "subtotal": 1411.85,
+    "volume_discount_pct": 3,
+    "volume_discount_amt": 42.36,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 1369.49
+  },
+
+  {
+    "quote_id": "QUOTE-100469",
+    "date": "2026-04-07",
+    "customer": {
+      "name": "Brookhaven Nursing Academy",
+      "segment": "nursing_school",
+      "contact": "Chair, Dept. of Nursing, Prof. Gloria Nakamura",
+      "account_id": "ACCT-004788",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 3
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "Repeat customer (3 orders, qualifying threshold). First order with preferred pricing — 3% on gloves. Spring semester restocking.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "XCEED® 763376_CS Nitrile Exam Glove, Small, Standard Cuff Length, Blue",
+        "sku": "763376_CS",
+        "qty": 8,
+        "list_price": 89.99,
+        "unit_price": 87.29,
+        "preferred_pricing": true,
+        "extended": 698.32
+      },
+      {
+        "line": 2,
+        "product": "XCEED® 763377_CS Nitrile Exam Glove, Medium, Standard Cuff Length, Blue",
+        "sku": "763377_CS",
+        "qty": 10,
+        "list_price": 89.99,
+        "unit_price": 87.29,
+        "preferred_pricing": true,
+        "extended": 872.90
+      },
+      {
+        "line": 3,
+        "product": "Nasco Life/form® Advanced Multi-Venous IV & Injection Arm, Multiple Skin Tone Options",
+        "sku": "LF01003U",
+        "qty": 2,
+        "list_price": 1389.00,
+        "unit_price": 1389.00,
+        "preferred_pricing": false,
+        "extended": 2778.00
+      }
+    ],
+    "subtotal": 4349.22,
+    "volume_discount_pct": 5,
+    "volume_discount_amt": 217.46,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 4131.76
+  },
+
+  {
+    "quote_id": "QUOTE-100492",
+    "date": "2026-04-22",
+    "customer": {
+      "name": "Regional Medical Center — ICU Skills Lab",
+      "segment": "hospital_sim_lab",
+      "contact": "ICU Educator Priya Menon, RN MSN",
+      "account_id": "ACCT-007915",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "New account. IV pole and supply setup for ICU skills room. Under $2,500 — 3% volume discount.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "MidCentral IVP275 Stainless Steel 6-leg Spider IV Pole",
+        "sku": "IVP275",
+        "qty": 4,
+        "list_price": 354.12,
+        "unit_price": 354.12,
+        "preferred_pricing": false,
+        "extended": 1416.48
+      },
+      {
+        "line": 2,
+        "product": "MidCentral IVP221 Stainless Steel 5-leg Space Saving IV Pole",
+        "sku": "IVP221",
+        "qty": 2,
+        "list_price": 330.59,
+        "unit_price": 330.59,
+        "preferred_pricing": false,
+        "extended": 661.18
+      }
+    ],
+    "subtotal": 2077.66,
+    "volume_discount_pct": 3,
+    "volume_discount_amt": 62.33,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 2015.33
+  },
+
+  {
+    "quote_id": "QUOTE-100518",
+    "date": "2026-05-08",
+    "customer": {
+      "name": "Northgate Community Hospital — ED Skills Lab",
+      "segment": "hospital_sim_lab",
+      "contact": "Nursing Educator Beth Carmichael, RN",
+      "account_id": "ACCT-007291",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 4
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "Same repeat account as QUOTE-100280. Preferred pricing on venipuncture arms maintained. Larger order this cycle — 8% volume discount kicks in.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Life/form LF00698U Adult Venipuncture Injection Training Arm - White",
+        "sku": "LF00698U",
+        "qty": 2,
+        "list_price": 817.95,
+        "unit_price": 793.41,
+        "preferred_pricing": true,
+        "extended": 1586.82
+      },
+      {
+        "line": 2,
+        "product": "Nasco Life/form® Venipuncture and Injection Demonstration Arm, Dark or Light Skin Tone",
+        "sku": "LF01131U-PN",
+        "qty": 2,
+        "list_price": 945.00,
+        "unit_price": 916.65,
+        "preferred_pricing": true,
+        "extended": 1833.30
+      },
+      {
+        "line": 3,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 6,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 1781.70
+      },
+      {
+        "line": 4,
+        "product": "MediVena One-Care Ergo-Shield Safety Blood Collection Wing Sets, Pre-attached Holders",
+        "sku": "MV-ERGO-PRE",
+        "qty": 1,
+        "list_price": 264.00,
+        "unit_price": 264.00,
+        "preferred_pricing": false,
+        "extended": 264.00
+      }
+    ],
+    "subtotal": 5465.82,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 437.27,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 5028.55
+  },
+
+  {
+    "quote_id": "QUOTE-100541",
+    "date": "2026-06-03",
+    "customer": {
+      "name": "Pacific Coast Dental Academy",
+      "segment": "dental_clinic",
+      "contact": "Clinic Manager Heather Bloom",
+      "account_id": "ACCT-009501",
+      "customer_type": "new",
+      "prior_orders_12mo": 0
+    },
+    "rep": "Sarah Donovan, Account Executive",
+    "notes": "New dental account. Mixed glove order. Small order — freight applies, no volume discount.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Sonic BLUE Nitrile Powder Free Exam Gloves 300/Box (Aurelia)",
+        "sku": "AUR-SONIC-BLUE",
+        "qty": 4,
+        "list_price": 14.99,
+        "unit_price": 14.99,
+        "preferred_pricing": false,
+        "extended": 59.96
+      },
+      {
+        "line": 2,
+        "product": "Gloves MicroTouch Denta Exam Blue Nitrile 100 (Ansell)",
+        "sku": "ANS-MICROTOUCH",
+        "qty": 4,
+        "list_price": 18.99,
+        "unit_price": 18.99,
+        "preferred_pricing": false,
+        "extended": 75.96
+      },
+      {
+        "line": 3,
+        "product": "Curve Fitted Nitrile Exam Glove, 100/Box (Cranberry)",
+        "sku": "CRB-CURVE",
+        "qty": 4,
+        "list_price": 19.99,
+        "unit_price": 19.99,
+        "preferred_pricing": false,
+        "extended": 79.96
+      }
+    ],
+    "subtotal": 215.88,
+    "volume_discount_pct": 0,
+    "volume_discount_amt": 0.00,
+    "freight": 18.50,
+    "freight_note": "Standard freight — order under $500",
+    "total": 234.38
+  },
+
+  {
+    "quote_id": "QUOTE-100567",
+    "date": "2026-07-14",
+    "customer": {
+      "name": "Lakewood University — College of Health Sciences Clinical Skills Lab",
+      "segment": "clinical_skills_lab",
+      "contact": "Prof. Anita Sharma, Lab Director",
+      "account_id": "ACCT-005540",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 2
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Same account as QUOTE-100255 — now 2 orders in, not yet at 3-order preferred pricing threshold. Standard list pricing still applies. Large equipment refresh.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Simulaids 088FB ILS Full-Body Trainer with Intubation Head & IV Arm",
+        "sku": "SIM-088FB",
+        "qty": 1,
+        "list_price": 2838.95,
+        "unit_price": 2838.95,
+        "preferred_pricing": false,
+        "extended": 2838.95
+      },
+      {
+        "line": 2,
+        "product": "Simulaids 890 Deluxe Casualty Simulation Kit with Bleeding Strap-On Wounds & Moulage",
+        "sku": "SIM-890",
+        "qty": 2,
+        "list_price": 1161.95,
+        "unit_price": 1161.95,
+        "preferred_pricing": false,
+        "extended": 2323.90
+      },
+      {
+        "line": 3,
+        "product": "Life/form LF01122U Skin Vein Replacement Kit, White for Advanced IV Arm",
+        "sku": "LF01122U",
+        "qty": 4,
+        "list_price": 296.95,
+        "unit_price": 296.95,
+        "preferred_pricing": false,
+        "extended": 1187.80
+      },
+      {
+        "line": 4,
+        "product": "STERLING® 747112_CS Nitrile Exam Glove, Medium, Standard Cuff, Gray",
+        "sku": "747112_CS",
+        "qty": 6,
+        "list_price": 89.99,
+        "unit_price": 89.99,
+        "preferred_pricing": false,
+        "extended": 539.94
+      },
+      {
+        "line": 5,
+        "product": "MidCentral IVP237 Stainless Steel 6-leg IV Pole",
+        "sku": "IVP237",
+        "qty": 3,
+        "list_price": 280.00,
+        "unit_price": 280.00,
+        "preferred_pricing": false,
+        "extended": 840.00
+      }
+    ],
+    "subtotal": 7730.59,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 618.45,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 7112.14
+  },
+
+  {
+    "quote_id": "QUOTE-100589",
+    "date": "2026-08-20",
+    "customer": {
+      "name": "Gulf Coast EMS Regional Training Center",
+      "segment": "ems_program",
+      "contact": "Training Director Sandra Mejia",
+      "account_id": "ACCT-003489",
+      "customer_type": "repeat",
+      "prior_orders_12mo": 3
+    },
+    "rep": "James Whitfield, Senior Account Manager",
+    "notes": "Same account as QUOTE-100349 — now at repeat threshold. First order with preferred pricing: 4% below list on CPR manikins and airway trainers. Volume discount also applies.",
+    "line_items": [
+      {
+        "line": 1,
+        "product": "Prestan PP-AM-400M-MS Professional Adult Medium Skin CPR Manikin 4-Pack with Monitor",
+        "sku": "PP-AM-400M-MS",
+        "qty": 2,
+        "list_price": 758.00,
+        "unit_price": 727.68,
+        "preferred_pricing": true,
+        "extended": 1455.36
+      },
+      {
+        "line": 2,
+        "product": "Simulaids 500 Economy Adult Airway Management Trainer Head",
+        "sku": "SIM-500",
+        "qty": 3,
+        "list_price": 1336.95,
+        "unit_price": 1283.47,
+        "preferred_pricing": true,
+        "extended": 3850.41
+      },
+      {
+        "line": 3,
+        "product": "Simulaids 1640 Infant Choking Manikin with Full Body & Anatomical References",
+        "sku": "SIM-1640",
+        "qty": 2,
+        "list_price": 371.95,
+        "unit_price": 371.95,
+        "preferred_pricing": false,
+        "extended": 743.90
+      }
+    ],
+    "subtotal": 6049.67,
+    "volume_discount_pct": 8,
+    "volume_discount_amt": 483.97,
+    "freight": 0.00,
+    "freight_note": "Free freight — order over $500",
+    "total": 5565.70
+  }
+]

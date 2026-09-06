@@ -1,0 +1,10 @@
+{
+  "name_selector": "h1.product-name, h1[itemprop='name'], h1.page-title, .product-info h1",
+  "price_selector": "[itemprop='price'], .price-box .price, .product-price .price, span.price",
+  "sku_selector": "[itemprop='sku'], .product-sku, .sku-value, td.sku, .product-code span",
+  "description_selector": "[itemprop='description'], .product-description, #product-description, .description-content, .tab-content .description",
+  "pack_size_selector": ".pack-size, .product-pack, td:contains('Pack'), .product-attributes tr:contains('Pack')",
+  "uom_selector": ".unit-of-measure, .uom, td:contains('Unit'), .product-attributes tr:contains('Unit')",
+  "product_link_selector": ".product-item a.product-item-link, .products-grid .product-item a, .category-products li.item a.product-image, a[href*='/product/'], .product-list .product-name a",
+  "notes": "Selectors are inferred from common Magento/e-commerce patterns and schema.org microdata attributes since the provided HTML is largely minified JS analytics code with no visible product page DOM structure to inspect directly."
+}

@@ -1,0 +1,151 @@
+```
+================================================================================
+                        MERIDIAN MEDICAL & DENTAL SUPPLY CO.
+                        1840 Commerce Park Drive, Suite 200
+                        Columbus, OH 43219
+                        Tel: (614) 555-0190  |  Fax: (614) 555-0191
+                        sales@meridianmedsupply.com
+================================================================================
+
+SALES QUOTATION
+
+Quote #:    QUOTE-NEW-2025-07-14
+Date:       2025-07-14
+Valid For:  30 days from quote date
+Prepared By: Generated via RAG pipeline
+
+--------------------------------------------------------------------------------
+BILL TO / SHIP TO
+--------------------------------------------------------------------------------
+Customer:   Coastal Valley School of Nursing
+Attn:       Dr. Amara Osei, Lab Director
+Address:    [Street Address — on file / please confirm]
+            [City, State ZIP — on file / please confirm]
+Phone:      [Not provided]
+Email:      labdirector@coastalvalleynursing.edu
+Account #:  [ACCT-PENDING]   Customer Type: New
+
+--------------------------------------------------------------------------------
+LINE ITEMS
+--------------------------------------------------------------------------------
+ #  | Product Description                          | Qty | Unit Price | Extended
+----|----------------------------------------------|-----|------------|----------
+ 1  | Luxe Nitrile Exam Gloves, Powder Free Blue   |  3  |    $27.99  |   $83.97
+    | (Cranberry) — Small                          |     |            |
+    | [Matched from catalog; src: skydental]       |     |            |
+    |                                              |     |            |
+ 2  | Life/form LF01131U Venipuncture Injection    |  1  |   $303.95  |  $303.95
+    | Demonstration Arm                            |     |            |
+    | [Matched from catalog; src: medidepot]       |     |            |
+    |                                              |     |            |
+ 3  | *** SEE "ITEMS REQUIRING MANUAL REVIEW" ***  |  — |        —   |       —
+    | PulseMax Vital Signs Trainer or similar      |     |            |
+    | [UNRESOLVED — cannot price; see below]       |     |            |
+
+--------------------------------------------------------------------------------
+PRICING SUMMARY
+--------------------------------------------------------------------------------
+                                            Subtotal:            $387.92
+                     Volume Discount (N/A — subtotal under $1,000):  $0.00
+                                   Freight / Handling:            $18.50
+                              --------------------------------
+                                               TOTAL:            $406.42
+
+  (Unresolved item — PulseMax Vital Signs Trainer — is EXCLUDED from total above.
+   Final order total will change once that line item is confirmed. See below.)
+
+--------------------------------------------------------------------------------
+PRICING & DISCOUNT NOTES
+--------------------------------------------------------------------------------
+  • No historical quotes were found for this customer or account. This customer
+    is treated as NEW with no preferred pricing applied.
+
+  • Volume Discount: Subtotal of $387.92 does not meet the $1,000 minimum
+    threshold required for any volume discount tier. No discount applied.
+    (Volume discount schedule: $1,000–$2,499 = 3%; $2,500–$4,999 = 5%;
+    $5,000+ = 8%.)
+
+  • Freight: Order subtotal of $387.92 is under the $500 free-freight threshold.
+    Flat freight charge of $18.50 applied per standard terms (FOB Origin).
+    NOTE: If the unresolved Vital Signs Trainer item is added and the revised
+    subtotal exceeds $500, freight will be waived automatically at order time.
+
+  • Glove pricing (Line 1) is a consumable item and is final sale. No returns.
+
+  • Life/form Venipuncture Arm (Line 2) is simulator/manikin equipment.
+    Manufacturer warranty applies. Item is non-returnable as special-order
+    simulator equipment per standard return policy.
+
+--------------------------------------------------------------------------------
+TERMS & CONDITIONS
+--------------------------------------------------------------------------------
+Payment Terms:  Net 30 (approved accounts) / Credit card at time of order
+Freight Terms:  FOB Origin. Orders over $500 ship free within the contiguous US.
+                Orders under $500: flat $18.50 freight.
+Returns:        Unopened items may be returned within 30 days with prior
+                authorization. Special-order simulator equipment is non-returnable.
+Warranty:       Manufacturer warranty applies to all simulator/manikin products.
+                Consumables (gloves, replacement skins, vein kits) are final sale.
+
+Volume Discount Schedule (applied automatically at order time):
+  $1,000 – $2,499 subtotal:   3% discount
+  $2,500 – $4,999 subtotal:   5% discount
+  $5,000+         subtotal:   8% discount
+
+NOTE: Prices quoted are valid for 30 days. Simulator/manikin prices subject to
+manufacturer price changes. Glove and consumable pricing may fluctuate with
+supply. Contact your rep to confirm pricing before placing order.
+
+================================================================================
+               *** ITEMS REQUIRING MANUAL REVIEW ***
+================================================================================
+
+The following item(s) from your request could NOT be fully resolved and are
+NOT included in the subtotal or order total above. A Meridian rep will follow
+up, or you may reply to this quote to clarify.
+
+--------------------------------------------------------------------------------
+UNRESOLVED ITEM 1
+--------------------------------------------------------------------------------
+Requested:   "PulseMax Vital Signs Trainer" (or similar product)
+Quantity:    Not specified
+
+Reason Not Resolved:
+  The product name "PulseMax Vital Signs Trainer" did not return a confident
+  single catalog match. Two candidate products were identified with similarity
+  scores within 0.02 of each other, which is within our ambiguity threshold
+  and insufficient to select one without customer confirmation:
+
+    Candidate A: Nasco Healthcare Blood Pressure Trainer 2.0
+                 (catalog similarity score: 0.786)
+
+    Candidate B: AbSim Abdominal Examination Trainer
+                 (catalog similarity score: 0.768)
+
+  These are functionally distinct products at different price points.
+  Selecting the wrong item would result in an incorrect shipment.
+
+Action Required from Customer:
+  Please reply confirming which of the following best matches your need:
+
+    [ ] Option A — Nasco Healthcare Blood Pressure Trainer 2.0
+    [ ] Option B — AbSim Abdominal Examination Trainer
+    [ ] Neither of the above — please describe the intended use or
+        provide a manufacturer name / model number so we can locate
+        the correct item in our catalog.
+
+  Additionally, please confirm the quantity needed for this item.
+
+  Once confirmed, we will issue a revised quotation reflecting the updated
+  line item, corrected order total, and applicable freight recalculation.
+
+--------------------------------------------------------------------------------
+Contact your Meridian rep or reply to this email with your selection:
+  sales@meridianmedsupply.com  |  (614) 555-0190
+--------------------------------------------------------------------------------
+
+================================================================================
+                    Thank you for your business!
+           We look forward to supporting Coastal Valley School of Nursing.
+================================================================================
+```

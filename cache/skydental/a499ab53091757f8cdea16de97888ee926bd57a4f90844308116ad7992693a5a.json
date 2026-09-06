@@ -1,0 +1,10 @@
+{
+  "name_selector": "form h1",
+  "price_selector": ".js_price_container",
+  "sku_selector": ".js_sku",
+  "description_selector": null,
+  "pack_size_selector": null,
+  "uom_selector": null,
+  "product_link_selector": "a[href*='.htm']",
+  "notes": "Sky Dental product pages: name in form>h1, price in .js_price_container (content attr or text), SKU in .js_sku"
+}
