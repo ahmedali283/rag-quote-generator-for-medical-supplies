@@ -154,6 +154,33 @@ python quotes/process_customer_reply.py \
 
 ---
 
+## Web UI (demo)
+
+A browser interface for the quote generation pipeline. Not part of the graded assessment — built as an interview-facing demo.
+
+**Backend** (FastAPI, port 8001) — from the project root with venv active:
+
+```
+uvicorn webapp.backend.main:app --reload --port 8001
+```
+
+**Frontend** (Next.js, port 3000):
+
+```
+cd webapp\frontend
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. Paste a customer email subject and body, click **Generate Quote**. The pipeline runs server-side and returns two panels:
+
+- **Left** — the outbound reply email to the customer (confirmed prices + clarifying questions for anything unresolved)
+- **Right** — the formal quotation document, downloadable as PDF via the **Download Quotation PDF** button
+
+See `webapp/README.md` for full setup details.
+
+---
+
 ## Where things are
 
 | File | What's in it |
@@ -161,6 +188,7 @@ python quotes/process_customer_reply.py \
 | `crawler/PART1_NOTES.md` | Crawler design: cache architecture, rate limiting, schema discovery, resumability, why each source was chosen |
 | `matching/PART2_NOTES.md` | Matching pipeline design: blocking strategy, scoring formula, LLM arbitration, eval results, known precision problem and its cause |
 | `quotes/PART3_NOTES.md` | RAG pipeline design: embedding strategy, retrieval paths, resolution thresholds, test case walkthroughs, known limitations |
+| `webapp/README.md` | Setup and run instructions for the demo web UI |
 | `SCRAPE_LEDGER.md` | Per-source crawl decisions: what was tried, what was blocked, what was scoped out and why |
 | `WRITEUP.md` | Short written answers to the assessment questions: source selection, agent vs. hand-code tradeoffs, matching strategy and eval numbers, hallucination prevention, production monitoring |
 | `dev_scripts/` | One-off diagnostic scripts used during development (schema checks, resolution debugging, decision restoration) — not part of the main pipeline |

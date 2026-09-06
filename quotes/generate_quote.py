@@ -225,15 +225,17 @@ def _resolve_single_item(
         }
 
     # --- SKU filter ---
-    # If the description contains an explicit SKU/model number
-    # (alphanumeric token with digits, e.g. LF00698U, IV-35, PP-AM-100M-MS),
-    # filter candidates to those whose raw_name contains that token.
-    # Search description, attributes list, AND the raw email — the parser
-    # sometimes places the SKU in attributes rather than the description text,
-    # and the raw email is the ground truth fallback for any case Claude drops.
+    # If the description contains an explicit SKU/model number, filter candidates
+    # to those whose raw_name contains that token.
+    # Two token shapes are recognised:
+    #   - Letter-prefixed:  LF00698U, IV-35, PP-AM-100M-MS  ([A-Z]{1,6}[-_]?\d[\w\-]{2,})
+    #   - Bare numeric:     747113, 747112  (5+ digit run, not preceded by a letter
+    #     or dash so that QUOTE-100327 and ACCT-004421 references don't fire)
+    # Search description, attributes list, AND raw email — the parser sometimes
+    # places the SKU in attributes rather than description text.
     attrs_text = " ".join(item.get("attributes") or [])
     search_text = item["description"] + " " + attrs_text + " " + email_text
-    sku_match = re.search(r'\b([A-Z]{1,6}[-_]?\d[\w\-]{2,})\b', search_text)
+    sku_match = re.search(r'\b([A-Z]{1,6}[-_]?\d[\w\-]{2,}|(?<![A-Z-])\d{5,})\b', search_text)
     if sku_match:
         sku_token = sku_match.group(1).upper()
         sku_filtered = [c for c in candidates if sku_token in c["raw_name"].upper()]
@@ -247,11 +249,15 @@ def _resolve_single_item(
     # This prevents silently picking the wrong size when multiple sizes
     # score similarly.
     size = (item.get("size") or "").strip().lower()
+    # Map parser size tokens to the full words that appear in catalog raw_names.
+    # Short-form aliases (' s ', 'm,', etc.) are intentionally excluded: they
+    # false-match common words like "Standard" and "Cuff", which appear in nearly
+    # every Sterling glove name and would defeat the filter entirely.
     size_aliases = {
-        "small": ["small", " s ", "s,", "(s)"],
-        "medium": ["medium", " m ", "m,", "(m)"],
-        "large": ["large", " l ", "l,", "(l)"],
-        "xl": ["x-large", "xl", "x large", "extra large"],
+        "small": ["small"],
+        "medium": ["medium"],
+        "large": ["large"],
+        "xl": ["x-large", "x large", "extra large", "xl"],
         "adult": ["adult"],
         "pediatric": ["pediatric", "child", "junior"],
         "infant": ["infant", "neonatal", "newborn"],
